@@ -371,4 +371,52 @@
 </ul>
 ]]></content>
   </entry>
+  <entry>
+    <title>Hexo博客安装</title>
+    <url>/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
+<li>node -v</li>
+</ul>
+<h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><ul>
+<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></li>
+</ul>
+<h3 id="安装hexo组件，启动博客"><a href="#安装hexo组件，启动博客" class="headerlink" title="安装hexo组件，启动博客"></a>安装hexo组件，启动博客</h3><ol>
+<li>cnpm install -g hexo-cli</li>
+<li>mkdir blog </li>
+<li>cd blog</li>
+<li>hexo init</li>
+<li>hexo s //启动</li>
+<li>hexo n “xxx” //新建博文</li>
+<li>hexo clean //清理一下</li>
+<li>hexo g //重新生成一下</li>
+<li>hexo s //再启动看效果</li>
+</ol>
+<h3 id="配到github"><a href="#配到github" class="headerlink" title="配到github"></a>配到github</h3><ol>
+<li>注册github账号</li>
+<li>new repository<br>名字必须是 github名.github.io</li>
+<li>create</li>
+<li>cnpm install –save hexo-deployer-git</li>
+<li>编辑_config.yml<pre><code>最后一行，deploy:
+type:git
+repo: https://github.com/xxx/xxx.github.io.git
+branch: master</code></pre>
+</li>
+<li>保存</li>
+<li>hexo d</li>
+<li>输入账号，密码</li>
+<li>刷新，博客的内容就出来了</li>
+<li>访问<a href="https://xxx.github.io/">https://xxx.github.io</a> 就能看见你的博客了</li>
+</ol>
+<h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><ol>
+<li>在网上找到要的hexo主题的github地址</li>
+<li>git clone xxxxx  themes/xxx</li>
+<li>修改_config.yml</li>
+<li>找到theme那一行<br>theme: xxx  </li>
+<li>hexo clean </li>
+<li>hexo g</li>
+<li>hexo s<br>主题就上去了</li>
+<li>hexo d<br>等一会儿，访问github.io就行了</li>
+</ol>
+]]></content>
+  </entry>
 </search>

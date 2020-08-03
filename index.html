@@ -5,8 +5,6 @@
   
   
   
-    <meta name="description" content="努力工作|认真生活|相信未来">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
     
@@ -37,18 +35,12 @@
       </div>
     
     <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
-             poster="/images/ocean/ocean.png" x5-video-player-type="h5">
-        <source src="/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/images/ocean/ocean.webm" type="video/webm">
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-      <div class="video-overlay"></div>
+      <img src="/images/ocean/timg.jpg">
+	  <div class="video-overlay"></div>
     </div>
     <div class="video-inner text-center text-white">
       <h1><a href="/">HuangBin&#39;s Blog</a></h1>
-      <p></p>
+      <p>认真生活 | 努力学习 | 好好敲代码</p>
       <div><img src="/images/hexo-inverted.svg" class="brand" alt="HuangBin&#39;s Blog"></div>
     </div>
     <div class="video-learn-more">
@@ -130,7 +122,105 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckden06m90003ykszb94lfew6" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdeozi5w0003e4sz18h14itd" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-搭建博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo博客安装</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-08-03T11:54:24.000Z" itemprop="datePublished">2020-08-03</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
+<li>node -v</li>
+</ul>
+<h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><ul>
+<li>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></li>
+</ul>
+<h3 id="安装hexo组件，启动博客"><a href="#安装hexo组件，启动博客" class="headerlink" title="安装hexo组件，启动博客"></a>安装hexo组件，启动博客</h3><ol>
+<li>cnpm install -g hexo-cli</li>
+<li>mkdir blog </li>
+<li>cd blog</li>
+<li>hexo init</li>
+<li>hexo s //启动</li>
+<li>hexo n “xxx” //新建博文</li>
+<li>hexo clean //清理一下</li>
+<li>hexo g //重新生成一下</li>
+<li>hexo s //再启动看效果</li>
+</ol>
+<h3 id="配到github"><a href="#配到github" class="headerlink" title="配到github"></a>配到github</h3><ol>
+<li>注册github账号</li>
+<li>new repository<br>名字必须是 github名.github.io</li>
+<li>create</li>
+<li>cnpm install –save hexo-deployer-git</li>
+<li>编辑_config.yml<pre><code>最后一行，deploy:
+type:git
+repo: https://github.com/xxx/xxx.github.io.git
+branch: master</code></pre>
+</li>
+<li>保存</li>
+<li>hexo d</li>
+<li>输入账号，密码</li>
+<li>刷新，博客的内容就出来了</li>
+<li>访问<a target="_blank" rel="noopener" href="https://xxx.github.io/">https://xxx.github.io</a> 就能看见你的博客了</li>
+</ol>
+<h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><ol>
+<li>在网上找到要的hexo主题的github地址</li>
+<li>git clone xxxxx  themes/xxx</li>
+<li>修改_config.yml</li>
+<li>找到theme那一行<br>theme: xxx  </li>
+<li>hexo clean </li>
+<li>hexo g</li>
+<li>hexo s<br>主题就上去了</li>
+<li>hexo d<br>等一会儿，访问github.io就行了</li>
+</ol>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdeozi6b000be4szaps2gy9n" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -228,7 +318,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckden06m40001yksz7dzs9whp" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdeozi5r0001e4szabxg1iz3" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -345,7 +435,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckden06mg0008ykszbnzq6vzk" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdeozi670008e4sz8kon8zrh" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -431,7 +521,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckden06mj000aykszfbg5cxtg" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckdeozi69000ae4szahathfz4" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -502,7 +592,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/26/import-export/" data-id="ckden06me0006yksz0snseu4r" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/26/import-export/" data-id="ckdeozi640006e4szfy6gbo2k" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -572,7 +662,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/25/fullEditer/" data-id="ckden06md0005ykszcvsb0eio" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/25/fullEditer/" data-id="ckdeozi620005e4sz7n2e1ewe" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -715,7 +805,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/20/frontendbalabala/" data-id="ckden06mb0004ykszhxxd79un" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/20/frontendbalabala/" data-id="ckdeozi600004e4sz1xdff28z" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -798,7 +888,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/19/jobskill/" data-id="ckden06mf0007ykszej0m4py9" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/19/jobskill/" data-id="ckdeozi650007e4szdmuf9s7y" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -871,7 +961,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/15/useecharts/" data-id="ckden06mi0009yksz8g50051t" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/15/useecharts/" data-id="ckdeozi680009e4szddev7jfa" class="article-share-link">
                                             Share
                                         </a>
                                         
