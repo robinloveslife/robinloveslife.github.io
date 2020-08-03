@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vue页面组件化-父子组件传值</title>
+    <url>/2020/08/03/components/</url>
+    <content><![CDATA[<blockquote>
+<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
+</blockquote>
+<ul>
+<li>父组件引</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>子组件定义</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>sql server证书加密解密</title>
     <url>/2020/08/01/addkey/</url>
     <content><![CDATA[<h2 id="加密前"><a href="#加密前" class="headerlink" title="加密前"></a>加密前</h2><ul>
@@ -46,36 +76,6 @@
 <h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
 <li><a href="https://www.cnblogs.com/wolfocme110/p/4016035.html">https://www.cnblogs.com/wolfocme110/p/4016035.html</a></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>vue页面组件化-父子组件传值</title>
-    <url>/2020/08/03/components/</url>
-    <content><![CDATA[<blockquote>
-<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
-</blockquote>
-<ul>
-<li>父组件引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>子组件定义</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
   <entry>
@@ -246,6 +246,65 @@
 ]]></content>
   </entry>
   <entry>
+    <title>vue基础知识</title>
+    <url>/2020/07/29/vuebase/</url>
+    <content><![CDATA[<h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
+<li>v-html</li>
+<li>v-bind</li>
+<li>v-on</li>
+<li>v-if</li>
+<li>v-else</li>
+<li>v-else-if</li>
+<li>v-show</li>
+<li>v-for</li>
+<li>v-model<ul>
+<li>V-model 双向绑定指的是 view（dom） 与 Model（Js对象）</li>
+</ul>
+</li>
+<li>v-focus<ul>
+<li>页面加载时，元素获得焦点</li>
+</ul>
+</li>
+</ul>
+<h2 id="computed与methods"><a href="#computed与methods" class="headerlink" title="computed与methods"></a>computed与methods</h2><p>computed与methods效果一样<br>但，computed基于他的缓存依赖，依赖发生改变时才会重新取值<br>而，methods在重新渲染时，总会重新调用执行<br>Computed将function与里面的值绑定，只有在值变化时才会触发content,<br>methods每次进入页面都会执行该方法</p>
+<h2 id="Watch-监听"><a href="#Watch-监听" class="headerlink" title="Watch 监听"></a>Watch 监听</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">New vue(&#123;</span><br><span class="line">    El:&#39;#root&#39;,</span><br><span class="line">    Data:&#123;</span><br><span class="line">        cityName:&#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    Watch:&#123;</span><br><span class="line">        cityName:&#123;</span><br><span class="line">            Handler(newName,oldName)&#123;</span><br><span class="line">     </span><br><span class="line">            &#125;,</span><br><span class="line">            Immediate:true    &#x2F;&#x2F;&#x2F;watch第一次绑定就执行，</span><br><span class="line">            Deep:true   &#x2F;&#x2F;&#x2F;深度监听--监听对象内部属性的改变</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li>全局组件<ul>
+<li><xxx message="hello"></xxx><br>Vue.component(‘xxx’,{ props:[‘message’] template:’<h1>自定义组件</h1>‘})  //prop接受父组件数据参数，单向-父穿子，子不传父</li>
+</ul>
+</li>
+<li>局部组件<ul>
+<li>Components:{‘xxx’:Child}  //只能在这个实例中使用</li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>echarts的基础使用</title>
+    <url>/2020/07/15/useecharts/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li>ECharts<ul>
+<li>缩写来自Enterprise Charts,商业级数据图表,是百度的一个开源的数据可视化工具,一个纯Javascript的图表库</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
+<li>进入官网<a href="https://www.echartsjs.com/zh/index.html">https://www.echartsjs.com/zh/index.html</a><br>选择定制下载，选择需要的组件下载对应的echarts.min.js</li>
+<li>进入官方实例，找到自己想要的图，先在网页上进行修改<br>查看配置项手册，找到自己想要改的内容</li>
+<li>配置项简介<ul>
+<li><img src="/images/echarts.png" alt="avatar"></li>
+</ul>
+</li>
+<li>一般格式：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   var myChart &#x3D; echarts.init(document.getElementById(&#39;组件id&#39;));</span><br><span class="line">var option&#x3D;&#123;&#125;;</span><br><span class="line">myChart.clear();</span><br><span class="line">myChart.setOption(option);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      myChart.off(&quot;click&quot;);</span><br><span class="line">      myChart.on(&quot;click&quot;, function(params) &#123;</span><br><span class="line">        if (params.componentType &#x3D;&#x3D; &quot;series&quot;) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>近期总结前端知识</title>
     <url>/2020/07/30/tips/</url>
     <content><![CDATA[<h2 id="不同分辨率动态赋值"><a href="#不同分辨率动态赋值" class="headerlink" title="不同分辨率动态赋值"></a>不同分辨率动态赋值</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if (window.innerWidth &gt; 1440) &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;27.5%&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;37%&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dialogwidth:&quot;&quot;</span><br></pre></td></tr></table></figure>
@@ -310,65 +369,6 @@
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unique(arr) &#123;</span><br><span class="line">      var hash &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (hash.indexOf(arr[i]) &#x3D;&#x3D; -1) &#123;</span><br><span class="line">          hash.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return hash;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>echarts的基础使用</title>
-    <url>/2020/07/15/useecharts/</url>
-    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li>ECharts<ul>
-<li>缩写来自Enterprise Charts,商业级数据图表,是百度的一个开源的数据可视化工具,一个纯Javascript的图表库</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
-<li>进入官网<a href="https://www.echartsjs.com/zh/index.html">https://www.echartsjs.com/zh/index.html</a><br>选择定制下载，选择需要的组件下载对应的echarts.min.js</li>
-<li>进入官方实例，找到自己想要的图，先在网页上进行修改<br>查看配置项手册，找到自己想要改的内容</li>
-<li>配置项简介<ul>
-<li><img src="/images/echarts.png" alt="avatar"></li>
-</ul>
-</li>
-<li>一般格式：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   var myChart &#x3D; echarts.init(document.getElementById(&#39;组件id&#39;));</span><br><span class="line">var option&#x3D;&#123;&#125;;</span><br><span class="line">myChart.clear();</span><br><span class="line">myChart.setOption(option);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      myChart.off(&quot;click&quot;);</span><br><span class="line">      myChart.on(&quot;click&quot;, function(params) &#123;</span><br><span class="line">        if (params.componentType &#x3D;&#x3D; &quot;series&quot;) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>vue基础知识</title>
-    <url>/2020/07/29/vuebase/</url>
-    <content><![CDATA[<h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
-<li>v-html</li>
-<li>v-bind</li>
-<li>v-on</li>
-<li>v-if</li>
-<li>v-else</li>
-<li>v-else-if</li>
-<li>v-show</li>
-<li>v-for</li>
-<li>v-model<ul>
-<li>V-model 双向绑定指的是 view（dom） 与 Model（Js对象）</li>
-</ul>
-</li>
-<li>v-focus<ul>
-<li>页面加载时，元素获得焦点</li>
-</ul>
-</li>
-</ul>
-<h2 id="computed与methods"><a href="#computed与methods" class="headerlink" title="computed与methods"></a>computed与methods</h2><p>computed与methods效果一样<br>但，computed基于他的缓存依赖，依赖发生改变时才会重新取值<br>而，methods在重新渲染时，总会重新调用执行<br>Computed将function与里面的值绑定，只有在值变化时才会触发content,<br>methods每次进入页面都会执行该方法</p>
-<h2 id="Watch-监听"><a href="#Watch-监听" class="headerlink" title="Watch 监听"></a>Watch 监听</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">New vue(&#123;</span><br><span class="line">    El:&#39;#root&#39;,</span><br><span class="line">    Data:&#123;</span><br><span class="line">        cityName:&#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    Watch:&#123;</span><br><span class="line">        cityName:&#123;</span><br><span class="line">            Handler(newName,oldName)&#123;</span><br><span class="line">     </span><br><span class="line">            &#125;,</span><br><span class="line">            Immediate:true    &#x2F;&#x2F;&#x2F;watch第一次绑定就执行，</span><br><span class="line">            Deep:true   &#x2F;&#x2F;&#x2F;深度监听--监听对象内部属性的改变</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
-<li>全局组件<ul>
-<li><xxx message="hello"></xxx><br>Vue.component(‘xxx’,{ props:[‘message’] template:’<h1>自定义组件</h1>‘})  //prop接受父组件数据参数，单向-父穿子，子不传父</li>
-</ul>
-</li>
-<li>局部组件<ul>
-<li>Components:{‘xxx’:Child}  //只能在这个实例中使用</li>
-</ul>
-</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
