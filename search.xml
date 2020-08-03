@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>vue页面组件化-父子组件传值</title>
-    <url>/2020/08/03/components/</url>
-    <content><![CDATA[<blockquote>
-<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
-</blockquote>
-<ul>
-<li>父组件引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>子组件定义</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>sql server证书加密解密</title>
     <url>/2020/08/01/addkey/</url>
     <content><![CDATA[<h2 id="加密前"><a href="#加密前" class="headerlink" title="加密前"></a>加密前</h2><ul>
@@ -76,6 +46,56 @@
 <h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
 <li><a href="https://www.cnblogs.com/wolfocme110/p/4016035.html">https://www.cnblogs.com/wolfocme110/p/4016035.html</a></li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>vue页面组件化-父子组件传值</title>
+    <url>/2020/08/03/components/</url>
+    <content><![CDATA[<blockquote>
+<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
+</blockquote>
+<ul>
+<li>父组件引</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>子组件定义</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>fullEditer</title>
+    <url>/2020/07/25/fullEditer/</url>
+    <content><![CDATA[<ul>
+<li>用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Editor v-model&#x3D;&quot;noticeContent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>引</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Editor from &#39;@&#x2F;components&#x2F;Editor&#39;;</span><br><span class="line">components: &#123;</span><br><span class="line">    Editor</span><br><span class="line">&#125;</span><br><span class="line">noticeContent:&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 图片上传组件辅助 --&gt;</span><br><span class="line">    &lt;el-upload</span><br><span class="line">      class&#x3D;&quot;avatar-uploader quill-img&quot;</span><br><span class="line">      :action&#x3D;&quot;uploadImgUrl&quot;</span><br><span class="line">      name&#x3D;&quot;file&quot;</span><br><span class="line">      :headers&#x3D;&quot;headers&quot;</span><br><span class="line">      :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">      :on-success&#x3D;&quot;quillImgSuccess&quot;</span><br><span class="line">      :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">      :before-upload&#x3D;&quot;quillImgBefore&quot;</span><br><span class="line">      accept&#x3D;&quot;.jpg, .jpeg, .png, .gif&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-upload&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 富文本组件 --&gt;</span><br><span class="line">    &lt;quill-editor</span><br><span class="line">      class&#x3D;&quot;editor&quot;</span><br><span class="line">      v-model&#x3D;&quot;content&quot;</span><br><span class="line">      ref&#x3D;&quot;quillEditor&quot;</span><br><span class="line">      :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">      @blur&#x3D;&quot;onEditorBlur($event)&quot;</span><br><span class="line">      @focus&#x3D;&quot;onEditorFocus($event)&quot;</span><br><span class="line">      @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">    &gt;&lt;&#x2F;quill-editor&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; getToken &#125; from &quot;@&#x2F;utils&#x2F;auth&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], &#x2F;&#x2F; 加粗 斜体 下划线 删除线</span><br><span class="line">  [&quot;blockquote&quot;, &quot;code-block&quot;], &#x2F;&#x2F; 引用  代码块</span><br><span class="line">  [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], &#x2F;&#x2F; 有序、无序列表</span><br><span class="line">  [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], &#x2F;&#x2F; 缩进</span><br><span class="line">  [&#123; size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] &#125;], &#x2F;&#x2F; 字体大小</span><br><span class="line">  [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], &#x2F;&#x2F; 标题</span><br><span class="line">  [&#123; color: [] &#125;, &#123; background: [] &#125;], &#x2F;&#x2F; 字体颜色、字体背景颜色</span><br><span class="line">  [&#123; align: [] &#125;], &#x2F;&#x2F; 对齐方式</span><br><span class="line">  [&quot;clean&quot;], &#x2F;&#x2F; 清除文本格式</span><br><span class="line">  [&quot;link&quot;, &quot;image&quot;, &quot;video&quot;], &#x2F;&#x2F; 链接、图片、视频</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">import &#123; quillEditor &#125; from &quot;vue-quill-editor&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.core.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.snow.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.bubble.css&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;* 编辑器的内容 *&#x2F;</span><br><span class="line">    value: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;* 图片大小 *&#x2F;</span><br><span class="line">    maxSize: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 4000, &#x2F;&#x2F;kb</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123; quillEditor &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      content: this.value,</span><br><span class="line">      uploadImgUrl: &quot;&quot;,</span><br><span class="line">      editorOption: &#123;</span><br><span class="line">        placeholder: &quot;&quot;,</span><br><span class="line">        theme: &quot;snow&quot;, &#x2F;&#x2F; or &#39;bubble&#39;</span><br><span class="line">        placeholder: &quot;请输入内容&quot;,</span><br><span class="line">        modules: &#123;</span><br><span class="line">          toolbar: &#123;</span><br><span class="line">            container: toolbarOptions,</span><br><span class="line">            handlers: &#123;</span><br><span class="line">              image: function (value) &#123;</span><br><span class="line">                if (value) &#123;</span><br><span class="line">                  &#x2F;&#x2F; 触发input框选择图片文件</span><br><span class="line">                  document.querySelector(&quot;.quill-img input&quot;).click();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                  this.quill.format(&quot;image&quot;, false);</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      uploadImgUrl: process.env.VUE_APP_BASE_API + &quot;&#x2F;common&#x2F;upload&quot;, &#x2F;&#x2F; 上传的图片服务器地址（这个地方注意）</span><br><span class="line">      headers: &#123;</span><br><span class="line">        Authorization: &quot;Bearer &quot; + getToken(),（这个地方注意）</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    value: function () &#123;</span><br><span class="line">      this.content &#x3D; this.value;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onEditorBlur() &#123;</span><br><span class="line">      &#x2F;&#x2F;失去焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorFocus() &#123;</span><br><span class="line">      &#x2F;&#x2F;获得焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorChange() &#123;</span><br><span class="line">      &#x2F;&#x2F;内容改变事件</span><br><span class="line">      this.$emit(&quot;input&quot;, this.content);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传前</span><br><span class="line">    quillImgBefore(file) &#123;</span><br><span class="line">      let fileType &#x3D; file.type;</span><br><span class="line">      if (fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;jpeg&quot; || fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;png&quot;) &#123;</span><br><span class="line">        return true;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;请插入图片类型文件(jpg&#x2F;jpeg&#x2F;png)&quot;);</span><br><span class="line">        return false;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    quillImgSuccess(res, file) &#123;</span><br><span class="line">      &#x2F;&#x2F; res为图片服务器返回的数据</span><br><span class="line">      &#x2F;&#x2F; 获取富文本组件实例</span><br><span class="line">      let quill &#x3D; this.$refs.quillEditor.quill;</span><br><span class="line">      &#x2F;&#x2F; 如果上传成功</span><br><span class="line">      if (res.code &#x3D;&#x3D; 200) &#123;</span><br><span class="line">        &#x2F;&#x2F; 获取光标所在位置</span><br><span class="line">        let length &#x3D; quill.getSelection().index;</span><br><span class="line">        &#x2F;&#x2F; 插入图片  res.url为服务器返回的图片地址</span><br><span class="line">        quill.insertEmbed(length, &quot;image&quot;, res.url);</span><br><span class="line">        &#x2F;&#x2F; 调整光标到最后</span><br><span class="line">        quill.setSelection(length + 1);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传失败</span><br><span class="line">    uploadError() &#123;</span><br><span class="line">      &#x2F;&#x2F; loading动画消失</span><br><span class="line">      this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt; </span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.editor &#123;</span><br><span class="line">  line-height: normal !important;</span><br><span class="line">  height: 692px;</span><br><span class="line">&#125;</span><br><span class="line">.quill-img &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;link&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入链接地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip.ql-editing a.ql-action::after &#123;</span><br><span class="line">  border-right: 0px;</span><br><span class="line">  content: &quot;保存&quot;;</span><br><span class="line">  padding-right: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;video&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入视频地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;14px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;small&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;small&quot;]::before &#123;</span><br><span class="line">  content: &quot;10px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;large&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;large&quot;]::before &#123;</span><br><span class="line">  content: &quot;18px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;huge&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;huge&quot;]::before &#123;</span><br><span class="line">  content: &quot;32px&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;文本&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;1&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;1&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题1&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;2&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;2&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题2&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;3&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;3&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题3&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;4&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;4&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题4&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;5&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;5&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题5&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;6&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;6&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题6&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;标准字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;serif&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;serif&quot;]::before &#123;</span><br><span class="line">  content: &quot;衬线字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;monospace&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;monospace&quot;]::before &#123;</span><br><span class="line">  content: &quot;等宽字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -172,26 +192,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>fullEditer</title>
-    <url>/2020/07/25/fullEditer/</url>
-    <content><![CDATA[<ul>
-<li>用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Editor v-model&#x3D;&quot;noticeContent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import Editor from &#39;@&#x2F;components&#x2F;Editor&#39;;</span><br><span class="line">components: &#123;</span><br><span class="line">    Editor</span><br><span class="line">&#125;</span><br><span class="line">noticeContent:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 图片上传组件辅助 --&gt;</span><br><span class="line">    &lt;el-upload</span><br><span class="line">      class&#x3D;&quot;avatar-uploader quill-img&quot;</span><br><span class="line">      :action&#x3D;&quot;uploadImgUrl&quot;</span><br><span class="line">      name&#x3D;&quot;file&quot;</span><br><span class="line">      :headers&#x3D;&quot;headers&quot;</span><br><span class="line">      :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">      :on-success&#x3D;&quot;quillImgSuccess&quot;</span><br><span class="line">      :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">      :before-upload&#x3D;&quot;quillImgBefore&quot;</span><br><span class="line">      accept&#x3D;&quot;.jpg, .jpeg, .png, .gif&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-upload&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 富文本组件 --&gt;</span><br><span class="line">    &lt;quill-editor</span><br><span class="line">      class&#x3D;&quot;editor&quot;</span><br><span class="line">      v-model&#x3D;&quot;content&quot;</span><br><span class="line">      ref&#x3D;&quot;quillEditor&quot;</span><br><span class="line">      :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">      @blur&#x3D;&quot;onEditorBlur($event)&quot;</span><br><span class="line">      @focus&#x3D;&quot;onEditorFocus($event)&quot;</span><br><span class="line">      @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">    &gt;&lt;&#x2F;quill-editor&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; getToken &#125; from &quot;@&#x2F;utils&#x2F;auth&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], &#x2F;&#x2F; 加粗 斜体 下划线 删除线</span><br><span class="line">  [&quot;blockquote&quot;, &quot;code-block&quot;], &#x2F;&#x2F; 引用  代码块</span><br><span class="line">  [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], &#x2F;&#x2F; 有序、无序列表</span><br><span class="line">  [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], &#x2F;&#x2F; 缩进</span><br><span class="line">  [&#123; size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] &#125;], &#x2F;&#x2F; 字体大小</span><br><span class="line">  [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], &#x2F;&#x2F; 标题</span><br><span class="line">  [&#123; color: [] &#125;, &#123; background: [] &#125;], &#x2F;&#x2F; 字体颜色、字体背景颜色</span><br><span class="line">  [&#123; align: [] &#125;], &#x2F;&#x2F; 对齐方式</span><br><span class="line">  [&quot;clean&quot;], &#x2F;&#x2F; 清除文本格式</span><br><span class="line">  [&quot;link&quot;, &quot;image&quot;, &quot;video&quot;], &#x2F;&#x2F; 链接、图片、视频</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">import &#123; quillEditor &#125; from &quot;vue-quill-editor&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.core.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.snow.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.bubble.css&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;* 编辑器的内容 *&#x2F;</span><br><span class="line">    value: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;* 图片大小 *&#x2F;</span><br><span class="line">    maxSize: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 4000, &#x2F;&#x2F;kb</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123; quillEditor &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      content: this.value,</span><br><span class="line">      uploadImgUrl: &quot;&quot;,</span><br><span class="line">      editorOption: &#123;</span><br><span class="line">        placeholder: &quot;&quot;,</span><br><span class="line">        theme: &quot;snow&quot;, &#x2F;&#x2F; or &#39;bubble&#39;</span><br><span class="line">        placeholder: &quot;请输入内容&quot;,</span><br><span class="line">        modules: &#123;</span><br><span class="line">          toolbar: &#123;</span><br><span class="line">            container: toolbarOptions,</span><br><span class="line">            handlers: &#123;</span><br><span class="line">              image: function (value) &#123;</span><br><span class="line">                if (value) &#123;</span><br><span class="line">                  &#x2F;&#x2F; 触发input框选择图片文件</span><br><span class="line">                  document.querySelector(&quot;.quill-img input&quot;).click();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                  this.quill.format(&quot;image&quot;, false);</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      uploadImgUrl: process.env.VUE_APP_BASE_API + &quot;&#x2F;common&#x2F;upload&quot;, &#x2F;&#x2F; 上传的图片服务器地址（这个地方注意）</span><br><span class="line">      headers: &#123;</span><br><span class="line">        Authorization: &quot;Bearer &quot; + getToken(),（这个地方注意）</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    value: function () &#123;</span><br><span class="line">      this.content &#x3D; this.value;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onEditorBlur() &#123;</span><br><span class="line">      &#x2F;&#x2F;失去焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorFocus() &#123;</span><br><span class="line">      &#x2F;&#x2F;获得焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorChange() &#123;</span><br><span class="line">      &#x2F;&#x2F;内容改变事件</span><br><span class="line">      this.$emit(&quot;input&quot;, this.content);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传前</span><br><span class="line">    quillImgBefore(file) &#123;</span><br><span class="line">      let fileType &#x3D; file.type;</span><br><span class="line">      if (fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;jpeg&quot; || fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;png&quot;) &#123;</span><br><span class="line">        return true;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;请插入图片类型文件(jpg&#x2F;jpeg&#x2F;png)&quot;);</span><br><span class="line">        return false;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    quillImgSuccess(res, file) &#123;</span><br><span class="line">      &#x2F;&#x2F; res为图片服务器返回的数据</span><br><span class="line">      &#x2F;&#x2F; 获取富文本组件实例</span><br><span class="line">      let quill &#x3D; this.$refs.quillEditor.quill;</span><br><span class="line">      &#x2F;&#x2F; 如果上传成功</span><br><span class="line">      if (res.code &#x3D;&#x3D; 200) &#123;</span><br><span class="line">        &#x2F;&#x2F; 获取光标所在位置</span><br><span class="line">        let length &#x3D; quill.getSelection().index;</span><br><span class="line">        &#x2F;&#x2F; 插入图片  res.url为服务器返回的图片地址</span><br><span class="line">        quill.insertEmbed(length, &quot;image&quot;, res.url);</span><br><span class="line">        &#x2F;&#x2F; 调整光标到最后</span><br><span class="line">        quill.setSelection(length + 1);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传失败</span><br><span class="line">    uploadError() &#123;</span><br><span class="line">      &#x2F;&#x2F; loading动画消失</span><br><span class="line">      this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt; </span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.editor &#123;</span><br><span class="line">  line-height: normal !important;</span><br><span class="line">  height: 692px;</span><br><span class="line">&#125;</span><br><span class="line">.quill-img &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;link&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入链接地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip.ql-editing a.ql-action::after &#123;</span><br><span class="line">  border-right: 0px;</span><br><span class="line">  content: &quot;保存&quot;;</span><br><span class="line">  padding-right: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;video&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入视频地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;14px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;small&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;small&quot;]::before &#123;</span><br><span class="line">  content: &quot;10px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;large&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;large&quot;]::before &#123;</span><br><span class="line">  content: &quot;18px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;huge&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;huge&quot;]::before &#123;</span><br><span class="line">  content: &quot;32px&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;文本&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;1&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;1&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题1&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;2&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;2&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题2&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;3&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;3&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题3&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;4&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;4&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题4&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;5&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;5&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题5&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;6&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;6&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题6&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;标准字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;serif&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;serif&quot;]::before &#123;</span><br><span class="line">  content: &quot;衬线字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;monospace&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;monospace&quot;]::before &#123;</span><br><span class="line">  content: &quot;等宽字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>import export example</title>
     <url>/2020/07/26/import-export/</url>
     <content><![CDATA[<ul>
@@ -243,65 +243,6 @@
 <li>懂微信小程序相关技术</li>
 <li>熟悉PHP/NodeJs/HTML5开发，熟练使用Linux系统</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>vue基础知识</title>
-    <url>/2020/07/29/vuebase/</url>
-    <content><![CDATA[<h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
-<li>v-html</li>
-<li>v-bind</li>
-<li>v-on</li>
-<li>v-if</li>
-<li>v-else</li>
-<li>v-else-if</li>
-<li>v-show</li>
-<li>v-for</li>
-<li>v-model<ul>
-<li>V-model 双向绑定指的是 view（dom） 与 Model（Js对象）</li>
-</ul>
-</li>
-<li>v-focus<ul>
-<li>页面加载时，元素获得焦点</li>
-</ul>
-</li>
-</ul>
-<h2 id="computed与methods"><a href="#computed与methods" class="headerlink" title="computed与methods"></a>computed与methods</h2><p>computed与methods效果一样<br>但，computed基于他的缓存依赖，依赖发生改变时才会重新取值<br>而，methods在重新渲染时，总会重新调用执行<br>Computed将function与里面的值绑定，只有在值变化时才会触发content,<br>methods每次进入页面都会执行该方法</p>
-<h2 id="Watch-监听"><a href="#Watch-监听" class="headerlink" title="Watch 监听"></a>Watch 监听</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">New vue(&#123;</span><br><span class="line">    El:&#39;#root&#39;,</span><br><span class="line">    Data:&#123;</span><br><span class="line">        cityName:&#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    Watch:&#123;</span><br><span class="line">        cityName:&#123;</span><br><span class="line">            Handler(newName,oldName)&#123;</span><br><span class="line">     </span><br><span class="line">            &#125;,</span><br><span class="line">            Immediate:true    &#x2F;&#x2F;&#x2F;watch第一次绑定就执行，</span><br><span class="line">            Deep:true   &#x2F;&#x2F;&#x2F;深度监听--监听对象内部属性的改变</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
-<li>全局组件<ul>
-<li><xxx message="hello"></xxx><br>Vue.component(‘xxx’,{ props:[‘message’] template:’<h1>自定义组件</h1>‘})  //prop接受父组件数据参数，单向-父穿子，子不传父</li>
-</ul>
-</li>
-<li>局部组件<ul>
-<li>Components:{‘xxx’:Child}  //只能在这个实例中使用</li>
-</ul>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>echarts的基础使用</title>
-    <url>/2020/07/15/useecharts/</url>
-    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li>ECharts<ul>
-<li>缩写来自Enterprise Charts,商业级数据图表,是百度的一个开源的数据可视化工具,一个纯Javascript的图表库</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
-<li>进入官网<a href="https://www.echartsjs.com/zh/index.html">https://www.echartsjs.com/zh/index.html</a><br>选择定制下载，选择需要的组件下载对应的echarts.min.js</li>
-<li>进入官方实例，找到自己想要的图，先在网页上进行修改<br>查看配置项手册，找到自己想要改的内容</li>
-<li>配置项简介<ul>
-<li><img src="/images/echarts.png" alt="avatar"></li>
-</ul>
-</li>
-<li>一般格式：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   var myChart &#x3D; echarts.init(document.getElementById(&#39;组件id&#39;));</span><br><span class="line">var option&#x3D;&#123;&#125;;</span><br><span class="line">myChart.clear();</span><br><span class="line">myChart.setOption(option);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      myChart.off(&quot;click&quot;);</span><br><span class="line">      myChart.on(&quot;click&quot;, function(params) &#123;</span><br><span class="line">        if (params.componentType &#x3D;&#x3D; &quot;series&quot;) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
@@ -369,6 +310,65 @@
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unique(arr) &#123;</span><br><span class="line">      var hash &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (hash.indexOf(arr[i]) &#x3D;&#x3D; -1) &#123;</span><br><span class="line">          hash.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return hash;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>echarts的基础使用</title>
+    <url>/2020/07/15/useecharts/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li>ECharts<ul>
+<li>缩写来自Enterprise Charts,商业级数据图表,是百度的一个开源的数据可视化工具,一个纯Javascript的图表库</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
+<li>进入官网<a href="https://www.echartsjs.com/zh/index.html">https://www.echartsjs.com/zh/index.html</a><br>选择定制下载，选择需要的组件下载对应的echarts.min.js</li>
+<li>进入官方实例，找到自己想要的图，先在网页上进行修改<br>查看配置项手册，找到自己想要改的内容</li>
+<li>配置项简介<ul>
+<li><img src="/images/echarts.png" alt="avatar"></li>
+</ul>
+</li>
+<li>一般格式：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   var myChart &#x3D; echarts.init(document.getElementById(&#39;组件id&#39;));</span><br><span class="line">var option&#x3D;&#123;&#125;;</span><br><span class="line">myChart.clear();</span><br><span class="line">myChart.setOption(option);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      myChart.off(&quot;click&quot;);</span><br><span class="line">      myChart.on(&quot;click&quot;, function(params) &#123;</span><br><span class="line">        if (params.componentType &#x3D;&#x3D; &quot;series&quot;) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>vue基础知识</title>
+    <url>/2020/07/29/vuebase/</url>
+    <content><![CDATA[<h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
+<li>v-html</li>
+<li>v-bind</li>
+<li>v-on</li>
+<li>v-if</li>
+<li>v-else</li>
+<li>v-else-if</li>
+<li>v-show</li>
+<li>v-for</li>
+<li>v-model<ul>
+<li>V-model 双向绑定指的是 view（dom） 与 Model（Js对象）</li>
+</ul>
+</li>
+<li>v-focus<ul>
+<li>页面加载时，元素获得焦点</li>
+</ul>
+</li>
+</ul>
+<h2 id="computed与methods"><a href="#computed与methods" class="headerlink" title="computed与methods"></a>computed与methods</h2><p>computed与methods效果一样<br>但，computed基于他的缓存依赖，依赖发生改变时才会重新取值<br>而，methods在重新渲染时，总会重新调用执行<br>Computed将function与里面的值绑定，只有在值变化时才会触发content,<br>methods每次进入页面都会执行该方法</p>
+<h2 id="Watch-监听"><a href="#Watch-监听" class="headerlink" title="Watch 监听"></a>Watch 监听</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">New vue(&#123;</span><br><span class="line">    El:&#39;#root&#39;,</span><br><span class="line">    Data:&#123;</span><br><span class="line">        cityName:&#39;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    Watch:&#123;</span><br><span class="line">        cityName:&#123;</span><br><span class="line">            Handler(newName,oldName)&#123;</span><br><span class="line">     </span><br><span class="line">            &#125;,</span><br><span class="line">            Immediate:true    &#x2F;&#x2F;&#x2F;watch第一次绑定就执行，</span><br><span class="line">            Deep:true   &#x2F;&#x2F;&#x2F;深度监听--监听对象内部属性的改变</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li>全局组件<ul>
+<li><xxx message="hello"></xxx><br>Vue.component(‘xxx’,{ props:[‘message’] template:’<h1>自定义组件</h1>‘})  //prop接受父组件数据参数，单向-父穿子，子不传父</li>
+</ul>
+</li>
+<li>局部组件<ul>
+<li>Components:{‘xxx’:Child}  //只能在这个实例中使用</li>
+</ul>
+</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
