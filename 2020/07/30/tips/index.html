@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+    <meta name="description" content="努力工作|认真生活|相信未来">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    近期总结前端知识 |
+    
+    HuangBin&#39;s Blog</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-tips" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      近期总结前端知识
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/07/30/tips/" class="article-date">
+  <time datetime="2020-07-30T11:54:24.000Z" itemprop="datePublished">2020-07-30</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h2 id="不同分辨率动态赋值"><a href="#不同分辨率动态赋值" class="headerlink" title="不同分辨率动态赋值"></a>不同分辨率动态赋值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if (window.innerWidth &gt; 1440) &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;27.5%&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;37%&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dialogwidth:&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="table批量删除选中行"><a href="#table批量删除选中行" class="headerlink" title="table批量删除选中行"></a>table批量删除选中行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let rows &#x3D; this.$refs.tableRefName.getSelectAllRows();</span><br><span class="line">let ids &#x3D; [];</span><br><span class="line">rows.forEach(item &#x3D;&gt; ids.push(item.id));</span><br><span class="line">api.delete(ids,response&#x3D;&gt;&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="动态切换组件"><a href="#动态切换组件" class="headerlink" title="动态切换组件"></a>动态切换组件</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liangmengbk/article/details/85013547">https://blog.csdn.net/liangmengbk/article/details/85013547</a></p>
+<h2 id="table组件-写columns-属性时render自定义内容"><a href="#table组件-写columns-属性时render自定义内容" class="headerlink" title="table组件 写columns 属性时render自定义内容"></a>table组件 写columns 属性时render自定义内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">prop: &quot;action&quot;,</span><br><span class="line">label: this.$t(&quot;noticePage.OPERATE&quot;),</span><br><span class="line">align: &quot;center&quot;,</span><br><span class="line">tableWidth: 260,</span><br><span class="line">render: (createElement, params) &#x3D;&gt; &#123;</span><br><span class="line">    return createElement(&quot;div&quot;, [</span><br><span class="line">        createElement(</span><br><span class="line">            &quot;td-button&quot;,</span><br><span class="line">            &#123;</span><br><span class="line">                style: &quot;min-width:25px !important&quot;,</span><br><span class="line">                attrs: &#123;</span><br><span class="line">                    type: &quot;text&quot;</span><br><span class="line">                &#125;,</span><br><span class="line"></span><br><span class="line">                on: &#123;</span><br><span class="line">                    click: _ &#x3D;&gt; &#123;</span><br><span class="line">                        this.openDialog(params.row);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;编辑&quot;</span><br><span class="line">        )</span><br><span class="line">    ]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="日期组件"><a href="#日期组件" class="headerlink" title="日期组件"></a>日期组件</h2><ul>
+<li>日期限制</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">pickerBeginDateBefore: &#123;</span><br><span class="line">    disabledDate: time &#x3D;&gt; &#123;</span><br><span class="line">        let beginDateVal &#x3D; new Date(this.ruleForm.patrolEndTime).getTime();</span><br><span class="line">        if (beginDateVal) &#123;</span><br><span class="line">            return time.getTime() &gt; beginDateVal;   &#x2F;&#x2F;开始日期小于结束日期</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">pickerBeginDateAfter: &#123;</span><br><span class="line">    disabledDate: time &#x3D;&gt; &#123;</span><br><span class="line">        let beginDateVal &#x3D; new Date(this.ruleForm.patrolStartTime).getTime();</span><br><span class="line">        if (beginDateVal) &#123;</span><br><span class="line">            return (                &#x2F;&#x2F;结束日期大于开始日期且小于开始日期加7天</span><br><span class="line">                time.getTime() &lt; beginDateVal - 24 * 60 * 60 * 1000 ||</span><br><span class="line">                time.getTime() &gt; beginDateVal + 30 * 24 * 60 * 60 * 1000</span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41910848/article/details/82218243">https://blog.csdn.net/weixin_41910848/article/details/82218243</a></p>
+<h2 id="添加和更新调同一个组件时的判断"><a href="#添加和更新调同一个组件时的判断" class="headerlink" title="添加和更新调同一个组件时的判断"></a>添加和更新调同一个组件时的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if (this.title &#x3D;&#x3D; &quot;添加&quot;) &#123;</span><br><span class="line">    this.addItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.editItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dialogClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;关闭</span><br><span class="line">    this.$emit(&quot;changeData&quot;);             &#x2F;&#x2F;刷新</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">schedulingListTemp.forEach((element) &#x3D;&gt; &#123;</span><br><span class="line">    var patrolUserIdTemp &#x3D; element.patrolUserId;</span><br><span class="line">    var item &#x3D; response.data.content.filter(</span><br><span class="line">      (t) &#x3D;&gt; t.id &#x3D;&#x3D; patrolUserIdTemp</span><br><span class="line">    );</span><br><span class="line">    if (item.length !&#x3D; 0) &#123;</span><br><span class="line">      var temp &#x3D; &#123;&#125;;</span><br><span class="line">      temp.patrolPName &#x3D; item[0].name;</span><br><span class="line">      temp.patrolPNameShow &#x3D;</span><br><span class="line">        item[0].name + &quot;(&quot; + item[0].personNo + &quot;)&quot;;</span><br><span class="line">      temp.patrolPeopleOrganizetion &#x3D; item[0].deptName;</span><br><span class="line">      temp.patrolRouteText &#x3D; element.patrolRouteText;</span><br><span class="line">      temp.patrolBeginTime &#x3D; element.patrolBeginTime;</span><br><span class="line">      temp.patrolEndTime &#x3D; element.patrolEndTime;</span><br><span class="line">      temp.patrolUserId &#x3D; element.patrolUserId;</span><br><span class="line">      temp.patrolLineId &#x3D; element.patrolLineId;</span><br><span class="line">      _this.schedulingList.push(temp);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      var temp2 &#x3D; &#123;&#125;;</span><br><span class="line">      temp2.patrolPName &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolPNameShow &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolPeopleOrganizetion &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolRouteText &#x3D; element.patrolRouteText;</span><br><span class="line">      temp2.patrolBeginTime &#x3D; element.patrolBeginTime;</span><br><span class="line">      temp2.patrolEndTime &#x3D; element.patrolEndTime;</span><br><span class="line">      temp2.patrolUserId &#x3D; element.patrolUserId;</span><br><span class="line">      temp2.patrolLineId &#x3D; element.patrolLineId;</span><br><span class="line">      _this.schedulingList.push(temp2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加和更新调同一个组件时的判断-1"><a href="#添加和更新调同一个组件时的判断-1" class="headerlink" title="添加和更新调同一个组件时的判断"></a>添加和更新调同一个组件时的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if (this.title &#x3D;&#x3D; &quot;添加&quot;) &#123;</span><br><span class="line">    this.addItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.editItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dialogClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;关闭</span><br><span class="line">    this.$emit(&quot;changeData&quot;);             &#x2F;&#x2F;刷新</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">getCurrentDate () &#123;</span><br><span class="line">    var date &#x3D; new Date();</span><br><span class="line">    var year &#x3D; date.getFullYear();</span><br><span class="line">    var month &#x3D; date.getMonth() + 1;</span><br><span class="line">    var day &#x3D; date.getDate();</span><br><span class="line">    var hour &#x3D; date.getHours();</span><br><span class="line">    var minute &#x3D; date.getMinutes();</span><br><span class="line">    var second &#x3D; date.getSeconds();</span><br><span class="line">    if (month &lt; 10) &#123;</span><br><span class="line">        month &#x3D; &quot;0&quot; + month;</span><br><span class="line">    &#125;</span><br><span class="line">    if (day &lt; 10) &#123;</span><br><span class="line">        day &#x3D; &quot;0&quot; + day;</span><br><span class="line">    &#125;</span><br><span class="line">    if (hour &lt; 10) &#123;</span><br><span class="line">        hour &#x3D; &quot;0&quot; + hour;</span><br><span class="line">    &#125;</span><br><span class="line">    if (minute &lt; 10) &#123;</span><br><span class="line">        minute &#x3D; &quot;0&quot; + minute;</span><br><span class="line">    &#125;</span><br><span class="line">    if (second &lt; 10) &#123;</span><br><span class="line">        second &#x3D; &quot;0&quot; + second;</span><br><span class="line">    &#125;</span><br><span class="line">    var nowDate &#x3D;</span><br><span class="line">    year +</span><br><span class="line">    &quot;-&quot; +</span><br><span class="line">    month +</span><br><span class="line">    &quot;-&quot; +</span><br><span class="line">    day +</span><br><span class="line">    &quot; &quot; +</span><br><span class="line">    hour +</span><br><span class="line">    &quot;:&quot; +</span><br><span class="line">    minute +</span><br><span class="line">    &quot;:&quot; +</span><br><span class="line">    second;</span><br><span class="line">    return nowDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>明天</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var tomrrowDay &#x3D; new Date(</span><br><span class="line">        new Date().setDate(new Date().getDate() + 1)</span><br><span class="line">      ).format(&quot;yyyy-MM-dd 00:00:00&quot;);</span><br><span class="line">      </span><br></pre></td></tr></table></figure>
+
+<h2 id="组件强制刷新技巧"><a href="#组件强制刷新技巧" class="headerlink" title="组件强制刷新技巧"></a>组件强制刷新技巧</h2><blockquote>
+<p> 在实际开发过程中经常会遇到动态取值之后vue组件不能刷新的问题，解决办法就是利用v-if，改变状态，强制刷新</p>
+</blockquote>
+<ul>
+<li>在要刷新的组件上定义v-if=”hackReset”</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-if&#x3D;&quot;hackReset&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>data里定义变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hackReset: true</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在需要刷新的位置加上刷新代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.hackReset &#x3D; false;</span><br><span class="line">this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">    this.hackReset &#x3D; true;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="匹配拼接"><a href="#匹配拼接" class="headerlink" title="匹配拼接"></a>匹配拼接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">for (var i &#x3D; 0; i &lt; _this.patrolPeople.length; i++) &#123;</span><br><span class="line">          if (_this.patrolPeople[i].patrolPName.match(_this.patrolUserName)) &#123;</span><br><span class="line">            userIdTempArray.push(_this.patrolPeople[i].patrolPId);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        userId &#x3D; userIdTempArray.join(&quot;,&quot;);</span><br><span class="line">        if (userId &#x3D;&#x3D;&#x3D; &quot;&quot;) &#123;</span><br><span class="line">          _this.schedulingList &#x3D; [];</span><br><span class="line">          _this.total &#x3D; 0;</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="object对象取key和value"><a href="#object对象取key和value" class="headerlink" title="object对象取key和value"></a>object对象取key和value</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">licenseN &#x3D; Object.keys(row.action.licenseNumberMap);</span><br><span class="line">                        statusN &#x3D; Object.values(row.action.licenseNumberMap);</span><br></pre></td></tr></table></figure>
+
+<h2 id="table中列值动态赋样式"><a href="#table中列值动态赋样式" class="headerlink" title="table中列值动态赋样式"></a>table中列值动态赋样式</h2><ul>
+<li>根据每一列alert0show,alert1show,alert3show的值来确定显示哪个图标</li>
+<li>根据每一列patrolAlarm的值来设定文字的样式  （动态赋class,class里定义样式）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column prop&#x3D;&quot;patrolAlarm&quot;  width&#x3D;&quot;148&quot; align&#x3D;&quot;center&quot;&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-success&quot; v-show&#x3D;&quot;scope.row.alert0show&quot; style&#x3D;&quot;color:#7E9913&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-warning&quot; v-show&#x3D;&quot;scope.row.alert1show&quot; style&#x3D;&quot;color:#FA4F4F&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-time&quot; v-show&#x3D;&quot;scope.row.alert3show&quot; style&#x3D;&quot;color:#7E9913&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;</span><br><span class="line">    &lt;span</span><br><span class="line">    :class&#x3D;&quot;((scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;1&#39;) || (scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;4&#39;) || (scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;5&#39;)) ? &#39;redColor&#39;:&#39;greenColor&#39;&quot;</span><br><span class="line">    &gt;&#123;&#123;scope.row.sAlertType&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">listUnique(array) &#123;</span><br><span class="line">      var r &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0, l &#x3D; array.length; i &lt; l; i++) &#123;</span><br><span class="line">        for (var j &#x3D; i + 1; j &lt; l; j++)</span><br><span class="line">          if (JSON.stringify(array[i]) &#x3D;&#x3D; JSON.stringify(array[j])) j &#x3D; ++i;</span><br><span class="line">        r.push(array[i]);</span><br><span class="line">      &#125;</span><br><span class="line">      return r;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">unique(arr) &#123;</span><br><span class="line">      var hash &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (hash.indexOf(arr[i]) &#x3D;&#x3D; -1) &#123;</span><br><span class="line">          hash.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return hash;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckden06mg0008ykszbnzq6vzk" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2020/08/01/addkey/" class="article-nav-link">
+        <strong class="article-nav-caption">Newer</strong>
+        <div class="article-nav-title">
+          
+            sql server证书加密解密
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/07/29/vuebase/" class="article-nav-link">
+        <strong class="article-nav-caption">Older</strong>
+        <div class="article-nav-title">vue基础知识</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '54e2c434614837b952ae',
+      clientSecret: 'fdc180c1b01b9e89f1673d28d01080b6b1d7fac5',
+      repo: 'gitalk',
+      owner: 'robinloveslife@163.com',
+      admin: ['robinloveslife@163.com'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 HuangBin&#39;s Blog</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="HuangBin&#39;s Blog"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">首页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+</body>
+</html>
