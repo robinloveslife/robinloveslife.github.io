@@ -30,7 +30,6 @@
 <main class="content">
   <section class="outer">
   <article id="post-vue全局存储变量" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
     <div class="article-inner">
         
             <header class="article-header">
@@ -86,11 +85,37 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdfzzrrj000ca8szc6h44abq" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdg2qu59000czsszf0g86b8b" class="article-share-link">
                                             Share
                                         </a>
                                         
                                     </footer>
+									
+										
+											<! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           ↑<br>
+           I&#39;m so cute. Please give me money.
+        </span>
+        <br>
+      </div>  
+    <div id="donate_guide" class="donate_bar center hidden" >
+        <!-- 支付宝打赏图案 -->
+        <img src="/images/Alipay.jpg" alt="支付宝打赏">
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function(){
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+    </script>
+</div>
+<! -- 添加捐赠图标 -->
+										
+									
 
     </div>
 
