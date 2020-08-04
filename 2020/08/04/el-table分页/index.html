@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    vue页面组件化-父子组件传值 |
+    el-table分页 |
     
     HuangBin&#39;s Blog</title>
   
@@ -29,7 +29,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-components" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-el-table分页" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -37,7 +37,7 @@
                 
   
     <h1 class="article-title" itemprop="name">
-      vue页面组件化-父子组件传值
+      el-table分页
     </h1>
   
   
@@ -50,8 +50,8 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/08/03/components/" class="article-date">
-  <time datetime="2020-08-03T11:54:24.000Z" itemprop="datePublished">2020-08-03</time>
+                        <a href="/2020/08/04/el-table%E5%88%86%E9%A1%B5/" class="article-date">
+  <time datetime="2020-08-04T05:54:24.000Z" itemprop="datePublished">2020-08-04</time>
 </a>
                             
                     </div>
@@ -73,35 +73,33 @@
 
                                                 
                                                                     <blockquote>
-<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
+<p>注意：total一定要赋值</p>
 </blockquote>
-<ul>
-<li>父组件引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>el-table属性</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:data&#x3D;&quot;tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)&quot;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>分页代码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;text-align: center;margin-top: 30px;&quot;&gt;</span><br><span class="line">    &lt;el-pagination</span><br><span class="line">        background</span><br><span class="line">        layout&#x3D;&quot;prev, pager, next&quot;</span><br><span class="line">        :total&#x3D;&quot;total&quot;</span><br><span class="line">        @current-change&#x3D;&quot;current_change&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-pagination&gt;</span><br><span class="line">&lt;&#x2F;div</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>data中定义</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">total: 0,</span><br><span class="line">pagesize: 10,</span><br><span class="line">currentPage: 1</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>子组件定义</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>methods中定义</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">current_change: function (currentPage) &#123;</span><br><span class="line">    this.currentPage &#x3D; currentPage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdfzzrr80003a8szcgvu1c4l" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdfzzrra0004a8szcryof8gh" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -113,19 +111,19 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/08/04/el-table%E5%88%86%E9%A1%B5/" class="article-nav-link">
+      <a href="/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" class="article-nav-link">
         <strong class="article-nav-caption">Newer</strong>
         <div class="article-nav-title">
           
-            el-table分页
+            手撕vue源码-day-1
           
         </div>
       </a>
     
     
-      <a href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
+      <a href="/2020/08/03/components/" class="article-nav-link">
         <strong class="article-nav-caption">Older</strong>
-        <div class="article-nav-title">Hexo博客安装</div>
+        <div class="article-nav-title">vue页面组件化-父子组件传值</div>
       </a>
     
   </nav>
