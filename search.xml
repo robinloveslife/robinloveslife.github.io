@@ -3,7 +3,7 @@
   <entry>
     <title>sql server证书加密解密</title>
     <url>/2020/08/01/addkey/</url>
-    <content><![CDATA[<h2 id="加密前"><a href="#加密前" class="headerlink" title="加密前"></a>加密前</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="加密前"><a href="#加密前" class="headerlink" title="加密前"></a>加密前</h2><ul>
 <li>drop 了证书和对称密钥</li>
 </ul>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
@@ -51,7 +51,7 @@
   <entry>
     <title>vue页面组件化-父子组件传值</title>
     <url>/2020/08/03/components/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
 </blockquote>
 <ul>
@@ -81,7 +81,7 @@
   <entry>
     <title>el-table分页</title>
     <url>/2020/08/04/el-table%E5%88%86%E9%A1%B5/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>注意：total一定要赋值</p>
 </blockquote>
 <ol>
@@ -109,7 +109,7 @@
   <entry>
     <title>杂</title>
     <url>/2020/07/20/frontendbalabala/</url>
-    <content><![CDATA[<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><ul>
 <li>主要看稳定性</li>
 </ul>
 <h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><ul>
@@ -202,7 +202,7 @@
   <entry>
     <title>fullEditer</title>
     <url>/2020/07/25/fullEditer/</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
 <li>用</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;Editor v-model&#x3D;&quot;noticeContent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
@@ -222,7 +222,7 @@
   <entry>
     <title>import export example</title>
     <url>/2020/07/26/import-export/</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
 <li>导出</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;btnExport&quot;&gt;导出&lt;&#x2F;el-button&gt;</span><br><span class="line"></span><br><span class="line">btnExport() &#123;</span><br><span class="line">      let queryParam &#x3D; &#123;&#125;;</span><br><span class="line">      api.exportData(queryParam, response &#x3D;&gt; &#123;</span><br><span class="line">        if (response.data.statusMessage &#x3D;&#x3D;&#x3D; &quot;-1&quot;) &#123;</span><br><span class="line">          this.$message(&#123;</span><br><span class="line">            showClose: true,</span><br><span class="line">            message: &quot;导出失败&quot;,</span><br><span class="line">            type: &quot;error&quot;</span><br><span class="line">          &#125;);</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br><span class="line">        this.doDownload(response.request.responseURL);</span><br><span class="line">        this.$message(&#123;</span><br><span class="line">          showClose: true,</span><br><span class="line">          message: &quot;导出成功！&quot;,</span><br><span class="line">          type: &quot;success&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    doDownload(src) &#123;</span><br><span class="line">      var a &#x3D; document.createElement(&quot;a&quot;);</span><br><span class="line">      a.href &#x3D; src;</span><br><span class="line">      document.body.appendChild(a);</span><br><span class="line">      a.click();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -243,7 +243,7 @@
   <entry>
     <title>技能要求</title>
     <url>/2020/07/19/jobskill/</url>
-    <content><![CDATA[<h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><p>工作职责<br>-负责企业智能平台部Web前端相关工作<br>-产品易用性改进和Web界面技术优化<br>-目标导向，通过与相关团队的配合推动业务目标的达成<br>-Web前沿技术研究和新技术调研并用于实践<br>任职要求<br>-拥有扎实的计算机基础，计算机或相关专业，2年及以上Web前端研发工作经历<br>-熟悉 W3C 标准，精通HTML5/CSS3，熟练掌握常见的页面布局方式，了解JS/CSS模块化开发<br>-熟练掌握 JavaScript，熟练使用 React/Vue 中的至少一种，掌握面向对象编程思想，对表现与数据分离有深刻理解<br>-熟练使用ES6，TypeScrip<br>-掌握常用的构建打包工具的配置方法，如 Webpack、Rollup、Gulp 等<br>-熟练使用各种调试、抓包工具，能独立分析、解决和归纳问题<br>-有出色的学习能力和强烈的进取心，有良好的沟通能力及执行力，有责任心，有一定的抗压能力<br>-熟悉PHP/NodeJs/HTML5开发，熟练使用Linux系统</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><p>工作职责<br>-负责企业智能平台部Web前端相关工作<br>-产品易用性改进和Web界面技术优化<br>-目标导向，通过与相关团队的配合推动业务目标的达成<br>-Web前沿技术研究和新技术调研并用于实践<br>任职要求<br>-拥有扎实的计算机基础，计算机或相关专业，2年及以上Web前端研发工作经历<br>-熟悉 W3C 标准，精通HTML5/CSS3，熟练掌握常见的页面布局方式，了解JS/CSS模块化开发<br>-熟练掌握 JavaScript，熟练使用 React/Vue 中的至少一种，掌握面向对象编程思想，对表现与数据分离有深刻理解<br>-熟练使用ES6，TypeScrip<br>-掌握常用的构建打包工具的配置方法，如 Webpack、Rollup、Gulp 等<br>-熟练使用各种调试、抓包工具，能独立分析、解决和归纳问题<br>-有出色的学习能力和强烈的进取心，有良好的沟通能力及执行力，有责任心，有一定的抗压能力<br>-熟悉PHP/NodeJs/HTML5开发，熟练使用Linux系统</p>
 <h2 id="天融信"><a href="#天融信" class="headerlink" title="天融信"></a>天融信</h2><p>职位描述</p>
 <ol>
 <li>云安全，容器安全产品前端webui开发。</li>
@@ -276,7 +276,7 @@
   <entry>
     <title>近期总结前端知识</title>
     <url>/2020/07/30/tips/</url>
-    <content><![CDATA[<h2 id="不同分辨率动态赋值"><a href="#不同分辨率动态赋值" class="headerlink" title="不同分辨率动态赋值"></a>不同分辨率动态赋值</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if (window.innerWidth &gt; 1440) &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;27.5%&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;37%&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dialogwidth:&quot;&quot;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="不同分辨率动态赋值"><a href="#不同分辨率动态赋值" class="headerlink" title="不同分辨率动态赋值"></a>不同分辨率动态赋值</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if (window.innerWidth &gt; 1440) &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;27.5%&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;37%&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dialogwidth:&quot;&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="table批量删除选中行"><a href="#table批量删除选中行" class="headerlink" title="table批量删除选中行"></a>table批量删除选中行</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let rows &#x3D; this.$refs.tableRefName.getSelectAllRows();</span><br><span class="line">let ids &#x3D; [];</span><br><span class="line">rows.forEach(item &#x3D;&gt; ids.push(item.id));</span><br><span class="line">api.delete(ids,response&#x3D;&gt;&#123;&#125;)</span><br></pre></td></tr></table></figure>
 
@@ -343,7 +343,7 @@
   <entry>
     <title>echarts的基础使用</title>
     <url>/2020/07/15/useecharts/</url>
-    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
 <li>ECharts<ul>
 <li>缩写来自Enterprise Charts,商业级数据图表,是百度的一个开源的数据可视化工具,一个纯Javascript的图表库</li>
 </ul>
@@ -366,7 +366,7 @@
   <entry>
     <title>vue基础知识</title>
     <url>/2020/07/29/vuebase/</url>
-    <content><![CDATA[<h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="v-xxx"><a href="#v-xxx" class="headerlink" title="v-xxx"></a>v-xxx</h2><ul>
 <li>v-html</li>
 <li>v-bind</li>
 <li>v-on</li>
@@ -402,7 +402,7 @@
   <entry>
     <title>vue存储全局变量</title>
     <url>/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
 <li>存</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localStorage.setItem(&#39;存储的名字&#39;, 要存的数据)</span><br></pre></td></tr></table></figure>
@@ -417,7 +417,7 @@
   <entry>
     <title>手撕vue源码-day-1</title>
     <url>/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/</url>
-    <content><![CDATA[<h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><ul>
 <li><p>作用：静态类型检查</p>
 <ul>
 <li>什么是静态类型检查？在编译期尽早发现（由类型错误引起的）bug</li>
@@ -466,7 +466,7 @@
   <entry>
     <title>Hexo博客安装</title>
     <url>/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
 <li>node -v</li>
 </ul>
 <h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><ul>
