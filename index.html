@@ -56,6 +56,247 @@
       <h1 class="page-type-title"></h1>
       
         
+          <article id="post-W3C学习" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/">w3c学习</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2020-08-12T11:54:24.000Z" itemprop="datePublished">2020-08-12</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="W3C"><a href="#W3C" class="headerlink" title="W3C"></a>W3C</h1><blockquote>
+<p>万维网联盟</p>
+</blockquote>
+<h2 id="结构标准语言"><a href="#结构标准语言" class="headerlink" title="结构标准语言"></a>结构标准语言</h2><ol>
+<li><p>可扩展标记语言 —-XML</p>
+<ul>
+<li><p>宗旨：传输和存储数据</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li><p>没有预定义标签</p>
+</li>
+<li><p>必须有关闭标签</p>
+</li>
+<li><p>对大小写敏感</p>
+</li>
+<li><p>属性值必须加引号</p>
+</li>
+<li><p>实体符号必须引用</p>
+</li>
+<li><p>空格会保留</p>
+</li>
+</ul>
+</li>
+<li><p>结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;root&gt; &#x2F;&#x2F;必须包含根元素</span><br><span class="line">&lt;child&gt;</span><br><span class="line">&lt;subchild&gt;.....&lt;&#x2F;subchild&gt;</span><br><span class="line">&lt;&#x2F;child&gt;</span><br><span class="line">&lt;&#x2F;root&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DTD</p>
+<ul>
+<li>定义xml结构</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE root</span><br><span class="line">[</span><br><span class="line">&lt;!ELEMENT root (child,subchild)&gt;</span><br><span class="line">&lt;!ELEMENT child (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT subchild (#PCDATA)&gt;</span><br><span class="line">]&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Schema</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;xs:element name&#x3D;&quot;root&quot;&gt;</span><br><span class="line">&lt;xs:complexType&gt;</span><br><span class="line">&lt;xs:sequence&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;child&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;subchild&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;xs:sequence&gt;</span><br><span class="line">&lt;&#x2F;xs:complexType&gt;</span><br><span class="line">&lt;&#x2F;xs:element&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>XMLHttpRequest对象</p>
+<ul>
+<li>在后台与服务器交换数据</li>
+</ul>
+</li>
+<li><p>XML解析器</p>
+</li>
+<li><p>XML DOM</p>
+<ul>
+<li>document.getElementById(“to”).innerHTML=<br>xmlDoc.getElementsByTagName(“to”)[0].childNodes[0].nodeValue;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>可扩展超文本编辑语言 —-XHTML</p>
+<ul>
+<li>特点：<ul>
+<li>XHTML 元素必须被正确地嵌套。</li>
+<li>XHTML 元素必须被关闭。</li>
+<li>标签名必须用小写字母。</li>
+<li>XHTML 文档必须拥有根元素</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="表现标准语言"><a href="#表现标准语言" class="headerlink" title="表现标准语言"></a>表现标准语言</h2><ul>
+<li>层叠样式表 —-CSS(2,3)</li>
+</ul>
+<h2 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h2><ol>
+<li>文档对象模型 —-DOM</li>
+<li>ECMASscript</li>
+</ol>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="ckdrb8q2s0001x4sz5ti0axrr" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-滚动条与图片移动" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" class="article-date">
+  <time datetime="2020-08-12T11:40:13.064Z" itemprop="datePublished">2020-08-12</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <p>title: 滚动条与图片移动<br>date: 2020-08-12 19:54:24<br>tags:</p>
+<h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckdrb8q3e000gx4sz9pkp55i4" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-vue全局存储变量" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/">vue存储全局变量</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" class="article-date">
+  <time datetime="2020-08-04T06:54:24.000Z" itemprop="datePublished">2020-08-04</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <ul>
+<li>存</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(&#39;存储的名字&#39;, 要存的数据)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>取</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xxx - localStorage.存储的名字</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdrb8q39000dx4szg81r28wq" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
           <article id="post-手撕vue源码day01" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
@@ -140,74 +381,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckdmo6c6x000c30sz85qm0r2h" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-vue全局存储变量" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/">vue存储全局变量</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" class="article-date">
-  <time datetime="2020-08-04T06:54:24.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <ul>
-<li>存</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(&#39;存储的名字&#39;, 要存的数据)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>取</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xxx - localStorage.存储的名字</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdmo6c6z000d30sz6rti1vxs" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckdrb8q3b000ex4szf5270xg2" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -287,7 +461,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdmo6c6k000430sz6qng7ehm" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdrb8q300005x4sz39dq1wdq" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -369,7 +543,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdmo6c6h000330szhdc77tco" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdrb8q2z0004x4sz4uyc47ye" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -469,7 +643,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdmo6c71000e30sz82b8980w" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdrb8q3d000fx4sz7avl758v" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -569,7 +743,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdmo6c6a000130szcdz5dgxk" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdrb8q2x0003x4sze1k1c0ed" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -688,7 +862,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdmo6c6r000830sz3gns4q2m" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdrb8q35000ax4sz5iot399g" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -776,152 +950,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckdmo6c6u000b30szc3jr817l" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-import-export" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/07/26/import-export/">import export example</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/07/26/import-export/" class="article-date">
-  <time datetime="2020-07-26T11:54:24.000Z" itemprop="datePublished">2020-07-26</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <ul>
-<li>导出</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;btnExport&quot;&gt;导出&lt;&#x2F;el-button&gt;</span><br><span class="line"></span><br><span class="line">btnExport() &#123;</span><br><span class="line">      let queryParam &#x3D; &#123;&#125;;</span><br><span class="line">      api.exportData(queryParam, response &#x3D;&gt; &#123;</span><br><span class="line">        if (response.data.statusMessage &#x3D;&#x3D;&#x3D; &quot;-1&quot;) &#123;</span><br><span class="line">          this.$message(&#123;</span><br><span class="line">            showClose: true,</span><br><span class="line">            message: &quot;导出失败&quot;,</span><br><span class="line">            type: &quot;error&quot;</span><br><span class="line">          &#125;);</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br><span class="line">        this.doDownload(response.request.responseURL);</span><br><span class="line">        this.$message(&#123;</span><br><span class="line">          showClose: true,</span><br><span class="line">          message: &quot;导出成功！&quot;,</span><br><span class="line">          type: &quot;success&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    doDownload(src) &#123;</span><br><span class="line">      var a &#x3D; document.createElement(&quot;a&quot;);</span><br><span class="line">      a.href &#x3D; src;</span><br><span class="line">      document.body.appendChild(a);</span><br><span class="line">      a.click();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>导入</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;btnImport&quot;&gt;导入&lt;&#x2F;el-button&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">btnImport() &#123;</span><br><span class="line">    this.importVisible &#x3D; true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;td-dialog</span><br><span class="line">      :visible&#x3D;&quot;importVisible&quot;</span><br><span class="line">      v-dialogDrag</span><br><span class="line">      :title&#x3D;&quot;IMPORT&quot;</span><br><span class="line">      width&#x3D;&quot;25%&quot;</span><br><span class="line">      :before-close&#x3D;&quot;importDialogClose&quot;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;el-row&gt;</span><br><span class="line">        &lt;el-col :span&#x3D;&quot;16&quot; style&#x3D;&quot;margin-top:10px;margin-bottom:5px;&quot;&gt;</span><br><span class="line">          &lt;td-button type&#x3D;&quot;primary&quot; @click&#x3D;&quot;chooseFile&quot;&gt;&#123;&#123;SELECTFILE&#125;&#125;&lt;&#x2F;td-button&gt;</span><br><span class="line">          &lt;td-button @click&#x3D;&quot;upLoadFile&quot;&gt;&#123;&#123;UPLOADFILE&#125;&#125;&lt;&#x2F;td-button&gt;</span><br><span class="line">        &lt;&#x2F;el-col&gt;</span><br><span class="line">        &lt;el-col style&#x3D;&quot;margin-bottom:30px;&quot;&gt;</span><br><span class="line">          &lt;span style&#x3D;&quot;font-size:10px;&quot;&gt;&#123;&#123;ONLIEXCEL&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;&#x2F;el-col&gt;</span><br><span class="line">        &lt;el-col style&#x3D;&quot;margin-bottom:30px;text-align:center&quot;&gt;</span><br><span class="line">          &lt;span style&#x3D;&quot;font-size:14px; color:#666&quot;&gt;&#123;&#123;uploadFileName&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">          &lt;td-button</span><br><span class="line">            @click&#x3D;&quot;removeFile&quot;</span><br><span class="line">            type&#x3D;&quot;text&quot;</span><br><span class="line">            size&#x3D;&quot;small&quot;</span><br><span class="line">            v-show&#x3D;&quot;uploadFileName !&#x3D; &#39;&#39;&quot;</span><br><span class="line">            style&#x3D;&quot;font-size:14px; color:#000; padding-left: 30px&quot;</span><br><span class="line">          &gt;&#123;&#123;DELFILE&#125;&#125;&lt;&#x2F;td-button&gt;</span><br><span class="line">          &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;btn_file&quot; style&#x3D;&quot;display:none&quot; accept&#x3D;&quot;.xls&quot; ref&#x3D;&quot;btnFile&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;el-col&gt;</span><br><span class="line">      &lt;&#x2F;el-row&gt;</span><br><span class="line">      &lt;span slot&#x3D;&quot;footer&quot; class&#x3D;&quot;dialog-footer&quot;&gt;</span><br><span class="line">        &lt;td-button @click&#x3D;&quot;importTemplate&quot;&gt;&#123;&#123;IMPORTMODELDOWNLOAD&#125;&#125;&lt;&#x2F;td-button&gt;</span><br><span class="line">        &lt;td-button @click&#x3D;&quot;importCancel&quot;&gt;&#123;&#123;CANCEL&#125;&#125;&lt;&#x2F;td-button&gt;</span><br><span class="line">      &lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;td-dialog&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import api from &quot;@&#x2F;assets&#x2F;api&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    importVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      IMPORT: this.$t(&quot;sightWordImportDialog.IMPORT&quot;),</span><br><span class="line">      SELECTFILE: this.$t(&quot;sightWordImportDialog.SELECTFILE&quot;),</span><br><span class="line">      UPLOADFILE: this.$t(&quot;sightWordImportDialog.UPLOADFILE&quot;),</span><br><span class="line">      ONLIEXCEL: this.$t(&quot;sightWordImportDialog.ONLIEXCEL&quot;),</span><br><span class="line">      DELFILE: this.$t(&quot;sightWordImportDialog.DELFILE&quot;),</span><br><span class="line">      IMPORTMODELDOWNLOAD: this.$t(&quot;sightWordImportDialog.IMPORTMODELDOWNLOAD&quot;),</span><br><span class="line">      CANCEL: this.$t(&quot;sightWordImportDialog.CANCEL&quot;),</span><br><span class="line">      uploadFileName: &quot;&quot;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    importDialogClose() &#123;</span><br><span class="line">      this.$emit(&quot;importDialogClose&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">    importTemplate() &#123;</span><br><span class="line">      let aTag &#x3D; document.createElement(&quot;a&quot;);</span><br><span class="line">      aTag.href &#x3D;</span><br><span class="line">        &quot;http:&#x2F;&#x2F;192.168.96.44:7000&#x2F;mclz&#x2F;filemanagement&#x2F;sightWordTemplate.xls&quot;;</span><br><span class="line">      document.body.appendChild(aTag);</span><br><span class="line">      aTag.click();</span><br><span class="line">    &#125;,</span><br><span class="line">    chooseFile() &#123;</span><br><span class="line">      let _this &#x3D; this;</span><br><span class="line">      let btnImport &#x3D; this.$refs.btnFile;</span><br><span class="line">      btnImport.click();</span><br><span class="line">      btnImport.onchange &#x3D; function() &#123;</span><br><span class="line">        _this.importData(btnImport.files);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    importData(files) &#123;</span><br><span class="line">      if (files.length &gt; 0) &#123;</span><br><span class="line">        let fileName &#x3D; files[files.length - 1].name;</span><br><span class="line">        if (fileName.indexOf(&quot;.xls&quot;, fileName.length - &quot;.xls&quot;.length) &#x3D;&#x3D;&#x3D; -1) &#123;</span><br><span class="line">          this.$message.error(&#123;</span><br><span class="line">            showClose: true,</span><br><span class="line">            message: $t(&quot;sightWordImportDialog.EILEMESSAGEERROR&quot;)</span><br><span class="line">          &#125;);</span><br><span class="line">          this.$refs.btnFile.value &#x3D; &quot;&quot;;</span><br><span class="line">          return;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          if (files[files.length - 1].size &#x2F; 1024 &#x2F; 1024 &gt; 300) &#123;</span><br><span class="line">            this.$message.error(&#123;</span><br><span class="line">              showClose: true,</span><br><span class="line">              message: $t(&quot;sightWordImportDialog.FILESIZELESS300M&quot;)</span><br><span class="line">            &#125;);</span><br><span class="line">            this.$refs.btnFile.value &#x3D; &quot;&quot;;</span><br><span class="line">            return;</span><br><span class="line">          &#125;</span><br><span class="line">          this.uploadFileName &#x3D; fileName;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    upLoadFile() &#123;</span><br><span class="line">      let files &#x3D; this.$refs.btnFile.files;</span><br><span class="line">      if (files.length &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">        this.$message.error(&#123;</span><br><span class="line">          showClose: true,</span><br><span class="line">          message: $t(&quot;sightWordImportDialog.FILESIZELESS300M&quot;)</span><br><span class="line">        &#125;);</span><br><span class="line">        this.$refs.btnFile.value &#x3D; &quot;&quot;;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      let header &#x3D; &#123;&#125;;</span><br><span class="line">      let params &#x3D; new FormData();</span><br><span class="line">      params.append(&quot;file&quot;, this.$refs.btnFile.files[files.length - 1]);</span><br><span class="line">      api.importData(params, response &#x3D;&gt; &#123;</span><br><span class="line">        if (response.data.statusCode &#x3D;&#x3D;&#x3D; &quot;API-COMMON-INF-OK&quot;) &#123;</span><br><span class="line">          this.$message(&#123;</span><br><span class="line">            showClose: true,</span><br><span class="line">            message: $t(&quot;sightWordImportDialog.FILESIZELESS300M&quot;),</span><br><span class="line">            type: &quot;success&quot;</span><br><span class="line">          &#125;);</span><br><span class="line">          this.importDialogClose();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          this.$message(&#123;</span><br><span class="line">            showClose: true,</span><br><span class="line">            message: $t(&quot;sightWordImportDialog.FILESIZELESS300M&quot;),</span><br><span class="line">            type: &quot;error&quot;</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        this.$refs.btnFile.value &#x3D; &quot;&quot;;</span><br><span class="line">        this.uploadFileName &#x3D; &quot;&quot;;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    removeFile() &#123;</span><br><span class="line">      this.$refs.btnFile.value &#x3D; &quot;&quot;;</span><br><span class="line">      this.uploadFileName &#x3D; &quot;&quot;;</span><br><span class="line">    &#125;,</span><br><span class="line">    importCancel() &#123;</span><br><span class="line">      this.importDialogClose();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/26/import-export/" data-id="ckdmo6c6p000630szaner8dfc" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-fullEditer" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/07/25/fullEditer/">fullEditer</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/07/25/fullEditer/" class="article-date">
-  <time datetime="2020-07-25T11:54:24.000Z" itemprop="datePublished">2020-07-25</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <ul>
-<li>用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Editor v-model&#x3D;&quot;noticeContent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import Editor from &#39;@&#x2F;components&#x2F;Editor&#39;;</span><br><span class="line">components: &#123;</span><br><span class="line">    Editor</span><br><span class="line">&#125;</span><br><span class="line">noticeContent:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 图片上传组件辅助 --&gt;</span><br><span class="line">    &lt;el-upload</span><br><span class="line">      class&#x3D;&quot;avatar-uploader quill-img&quot;</span><br><span class="line">      :action&#x3D;&quot;uploadImgUrl&quot;</span><br><span class="line">      name&#x3D;&quot;file&quot;</span><br><span class="line">      :headers&#x3D;&quot;headers&quot;</span><br><span class="line">      :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">      :on-success&#x3D;&quot;quillImgSuccess&quot;</span><br><span class="line">      :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">      :before-upload&#x3D;&quot;quillImgBefore&quot;</span><br><span class="line">      accept&#x3D;&quot;.jpg, .jpeg, .png, .gif&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-upload&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 富文本组件 --&gt;</span><br><span class="line">    &lt;quill-editor</span><br><span class="line">      class&#x3D;&quot;editor&quot;</span><br><span class="line">      v-model&#x3D;&quot;content&quot;</span><br><span class="line">      ref&#x3D;&quot;quillEditor&quot;</span><br><span class="line">      :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">      @blur&#x3D;&quot;onEditorBlur($event)&quot;</span><br><span class="line">      @focus&#x3D;&quot;onEditorFocus($event)&quot;</span><br><span class="line">      @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">    &gt;&lt;&#x2F;quill-editor&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; getToken &#125; from &quot;@&#x2F;utils&#x2F;auth&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], &#x2F;&#x2F; 加粗 斜体 下划线 删除线</span><br><span class="line">  [&quot;blockquote&quot;, &quot;code-block&quot;], &#x2F;&#x2F; 引用  代码块</span><br><span class="line">  [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], &#x2F;&#x2F; 有序、无序列表</span><br><span class="line">  [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], &#x2F;&#x2F; 缩进</span><br><span class="line">  [&#123; size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] &#125;], &#x2F;&#x2F; 字体大小</span><br><span class="line">  [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], &#x2F;&#x2F; 标题</span><br><span class="line">  [&#123; color: [] &#125;, &#123; background: [] &#125;], &#x2F;&#x2F; 字体颜色、字体背景颜色</span><br><span class="line">  [&#123; align: [] &#125;], &#x2F;&#x2F; 对齐方式</span><br><span class="line">  [&quot;clean&quot;], &#x2F;&#x2F; 清除文本格式</span><br><span class="line">  [&quot;link&quot;, &quot;image&quot;, &quot;video&quot;], &#x2F;&#x2F; 链接、图片、视频</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">import &#123; quillEditor &#125; from &quot;vue-quill-editor&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.core.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.snow.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.bubble.css&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;* 编辑器的内容 *&#x2F;</span><br><span class="line">    value: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;* 图片大小 *&#x2F;</span><br><span class="line">    maxSize: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 4000, &#x2F;&#x2F;kb</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123; quillEditor &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      content: this.value,</span><br><span class="line">      uploadImgUrl: &quot;&quot;,</span><br><span class="line">      editorOption: &#123;</span><br><span class="line">        placeholder: &quot;&quot;,</span><br><span class="line">        theme: &quot;snow&quot;, &#x2F;&#x2F; or &#39;bubble&#39;</span><br><span class="line">        placeholder: &quot;请输入内容&quot;,</span><br><span class="line">        modules: &#123;</span><br><span class="line">          toolbar: &#123;</span><br><span class="line">            container: toolbarOptions,</span><br><span class="line">            handlers: &#123;</span><br><span class="line">              image: function (value) &#123;</span><br><span class="line">                if (value) &#123;</span><br><span class="line">                  &#x2F;&#x2F; 触发input框选择图片文件</span><br><span class="line">                  document.querySelector(&quot;.quill-img input&quot;).click();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                  this.quill.format(&quot;image&quot;, false);</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      uploadImgUrl: process.env.VUE_APP_BASE_API + &quot;&#x2F;common&#x2F;upload&quot;, &#x2F;&#x2F; 上传的图片服务器地址（这个地方注意）</span><br><span class="line">      headers: &#123;</span><br><span class="line">        Authorization: &quot;Bearer &quot; + getToken(),（这个地方注意）</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    value: function () &#123;</span><br><span class="line">      this.content &#x3D; this.value;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onEditorBlur() &#123;</span><br><span class="line">      &#x2F;&#x2F;失去焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorFocus() &#123;</span><br><span class="line">      &#x2F;&#x2F;获得焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorChange() &#123;</span><br><span class="line">      &#x2F;&#x2F;内容改变事件</span><br><span class="line">      this.$emit(&quot;input&quot;, this.content);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传前</span><br><span class="line">    quillImgBefore(file) &#123;</span><br><span class="line">      let fileType &#x3D; file.type;</span><br><span class="line">      if (fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;jpeg&quot; || fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;png&quot;) &#123;</span><br><span class="line">        return true;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;请插入图片类型文件(jpg&#x2F;jpeg&#x2F;png)&quot;);</span><br><span class="line">        return false;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    quillImgSuccess(res, file) &#123;</span><br><span class="line">      &#x2F;&#x2F; res为图片服务器返回的数据</span><br><span class="line">      &#x2F;&#x2F; 获取富文本组件实例</span><br><span class="line">      let quill &#x3D; this.$refs.quillEditor.quill;</span><br><span class="line">      &#x2F;&#x2F; 如果上传成功</span><br><span class="line">      if (res.code &#x3D;&#x3D; 200) &#123;</span><br><span class="line">        &#x2F;&#x2F; 获取光标所在位置</span><br><span class="line">        let length &#x3D; quill.getSelection().index;</span><br><span class="line">        &#x2F;&#x2F; 插入图片  res.url为服务器返回的图片地址</span><br><span class="line">        quill.insertEmbed(length, &quot;image&quot;, res.url);</span><br><span class="line">        &#x2F;&#x2F; 调整光标到最后</span><br><span class="line">        quill.setSelection(length + 1);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传失败</span><br><span class="line">    uploadError() &#123;</span><br><span class="line">      &#x2F;&#x2F; loading动画消失</span><br><span class="line">      this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt; </span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.editor &#123;</span><br><span class="line">  line-height: normal !important;</span><br><span class="line">  height: 692px;</span><br><span class="line">&#125;</span><br><span class="line">.quill-img &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;link&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入链接地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip.ql-editing a.ql-action::after &#123;</span><br><span class="line">  border-right: 0px;</span><br><span class="line">  content: &quot;保存&quot;;</span><br><span class="line">  padding-right: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;video&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入视频地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;14px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;small&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;small&quot;]::before &#123;</span><br><span class="line">  content: &quot;10px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;large&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;large&quot;]::before &#123;</span><br><span class="line">  content: &quot;18px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;huge&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;huge&quot;]::before &#123;</span><br><span class="line">  content: &quot;32px&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;文本&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;1&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;1&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题1&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;2&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;2&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题2&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;3&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;3&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题3&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;4&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;4&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题4&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;5&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;5&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题5&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;6&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;6&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题6&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;标准字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;serif&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;serif&quot;]::before &#123;</span><br><span class="line">  content: &quot;衬线字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;monospace&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;monospace&quot;]::before &#123;</span><br><span class="line">  content: &quot;等宽字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/25/fullEditer/" data-id="ckdmo6c6t000930sz4h43djjr" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckdrb8q38000cx4sz398icfug" class="article-share-link">
                                             Share
                                         </a>
                                         
