@@ -167,7 +167,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="ckdrb8q2s0001x4sz5ti0axrr" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="ckdrbbqct0004w8szf7rpf14y" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -187,11 +187,25 @@
           <article id="post-滚动条与图片移动" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/">滚动条与图片移动</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
 
                 
                     <div class="article-meta">
                         <a href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" class="article-date">
-  <time datetime="2020-08-12T11:40:13.064Z" itemprop="datePublished">2020-08-12</time>
+  <time datetime="2020-08-12T11:48:24.000Z" itemprop="datePublished">2020-08-12</time>
 </a>
                             
                     </div>
@@ -206,14 +220,13 @@
                                             
 
                                                 
-                                                                    <p>title: 滚动条与图片移动<br>date: 2020-08-12 19:54:24<br>tags:</p>
-<h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+                                                                    <h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckdrb8q3e000gx4sz9pkp55i4" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckdrbbqd5000gw8szggco4qxb" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -280,7 +293,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdrb8q39000dx4szg81r28wq" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdrbbqd2000dw8sz9qim2i7q" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -381,7 +394,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckdrb8q3b000ex4szf5270xg2" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckdrbbqd2000ew8szelpx11jl" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -461,7 +474,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdrb8q300005x4sz39dq1wdq" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdrbbqcu0005w8szgmj5bkgv" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -543,7 +556,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdrb8q2z0004x4sz4uyc47ye" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdrbbqcq0003w8sz46i65uuc" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -643,7 +656,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdrb8q3d000fx4sz7avl758v" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdrbbqd3000fw8sz51je18ed" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -743,7 +756,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdrb8q2x0003x4sze1k1c0ed" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdrbbqcm0001w8szd3l220kl" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -862,7 +875,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdrb8q35000ax4sz5iot399g" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdrbbqd1000cw8sz2f4r63ee" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -950,7 +963,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckdrb8q38000cx4sz398icfug" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckdrbbqcz000bw8szd3wb00ek" class="article-share-link">
                                             Share
                                         </a>
                                         
