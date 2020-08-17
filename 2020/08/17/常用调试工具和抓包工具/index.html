@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    vue页面组件化-父子组件传值 |
+    常用调试工具与抓包工具（一）---调试工具 |
     
     HuangBin&#39;s Blog</title>
   
@@ -29,14 +29,14 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-components" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-常用调试工具和抓包工具" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
             <header class="article-header">
                 
   
     <h1 class="article-title" itemprop="name">
-      vue页面组件化-父子组件传值
+      常用调试工具与抓包工具（一）---调试工具
     </h1>
   
   
@@ -49,8 +49,8 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/08/03/components/" class="article-date">
-  <time datetime="2020-08-03T11:54:24.000Z" itemprop="datePublished">2020-08-03</time>
+                        <a href="/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="article-date">
+  <time datetime="2020-08-17T14:54:24.000Z" itemprop="datePublished">2020-08-17</time>
 </a>
                             
                     </div>
@@ -58,6 +58,8 @@
 
                         
                             
+    <div class="tocbot"></div>
+
 
 
 
@@ -71,36 +73,91 @@
                                             
 
                                                 
-                                                                    <blockquote>
-<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
+                                                                    <h2 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h2><blockquote>
+<p>参考地址：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b63e6b7df8bf">https://www.jianshu.com/p/b63e6b7df8bf</a></p>
 </blockquote>
+<p>最常用Chrome开发者工具 </p>
 <ul>
-<li>父组件引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<li><p>Ctrl Shift i | Ctrl Shift j |F12</p>
+</li>
+<li><p>使用</p>
 <ul>
-<li>子组件定义</li>
+<li><p>Elements</p>
+<ul>
+<li>styles<ul>
+<li>选择页面元素 Ctrl Shift c</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+</li>
+<li>Computed<ul>
+<li>只读 显示元素最终样式 查看元素最终属性值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Network</p>
+<ul>
+<li>name：资源名称</li>
+<li>status：http状态码</li>
+<li>type：请求资源的MIME类型<ul>
+<li>MIME类型：描述消息内容类型的因特网标准</li>
+<li>类型名：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/media/media_mimeref.asp">https://www.w3school.com.cn/media/media_mimeref.asp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Source</p>
+<ul>
+<li>断点快捷键<ul>
+<li>F8: 继续执行<br> F10: step over, 单步执行, 不进入函数<br> F11: step into, 单步执行, 进入函数<br> shift + F11: step out, 跳出函数<br> ctrl + o: 打开文件<br> ctrl + shit + o: 跳到函数定义位置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>TimeLine</p>
+<ul>
+<li>查看脚本执行时间，页面元素渲染时间</li>
+<li>结合profiles进行js性能分析</li>
+</ul>
+</li>
+<li><p>Console</p>
+<ul>
+<li><p>console.log 普通信息</p>
+</li>
+<li><p>console.info 提示类信息</p>
+</li>
+<li><p>console.error 错误信息</p>
+</li>
+<li><p>console.warn 警示信息</p>
+</li>
+<li><p>console.group &amp; console.groupEnd 信息分组</p>
+</li>
+<li><p>console.table 以表格形式将数据输出</p>
+</li>
+<li><p>console.assert 对传入表达式进行断言（没太看懂）</p>
+</li>
+<li><p>console.count 计数</p>
+</li>
+<li><p>console.time &amp; console.timeEnd 看耗时情况</p>
+</li>
+<li><p>console.profile &amp; console.profileEnd cpu信息</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>IETest：I浏览器版本切换工具（没用过）</p>
+<p>Emmet：仿css选择器语法生成代码，提高代码编写速度（没用过）</p>
+<p>JSON格式校验工具：<a target="_blank" rel="noopener" href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a></p>
+<p>JS压缩和解压缩工具：<a target="_blank" rel="noopener" href="http://tool.oschina.net/jscompress">http://tool.oschina.net/jscompress</a>   <a target="_blank" rel="noopener" href="http://tool.css-js.com/">http://tool.css-js.com/</a></p>
+<h2 id="抓包工具"><a href="#抓包工具" class="headerlink" title="抓包工具"></a>抓包工具</h2><ul>
+<li>待续</li>
+</ul>
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdymptgb0003zoszet4l1795" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" data-id="ckdymptgn000fzosz6gzfgziz" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -115,19 +172,10 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/08/04/el-table%E5%88%86%E9%A1%B5/" class="article-nav-link">
-        <strong class="article-nav-caption">Newer</strong>
-        <div class="article-nav-title">
-          
-            el-table分页
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
+      <a href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
         <strong class="article-nav-caption">Older</strong>
-        <div class="article-nav-title">Hexo博客安装</div>
+        <div class="article-nav-title">w3c学习</div>
       </a>
     
   </nav>
