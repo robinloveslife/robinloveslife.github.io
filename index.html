@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
     
-    HuangBin&#39;s Blog</title>
+    树熊与浆果</title>
   
     <link rel="shortcut icon" href="/favicon.ico">
   
@@ -39,9 +39,9 @@
 	  <div class="video-overlay"></div>
     </div>
     <div class="video-inner text-center text-white">
-      <h1><a href="/">HuangBin&#39;s Blog</a></h1>
+      <h1><a href="/">树熊与浆果</a></h1>
       <p>认真生活 | 努力学习 | 好好敲代码</p>
-      <div><img src="/images/hexo-inverted.svg" class="brand" alt="HuangBin&#39;s Blog"></div>
+      <div><img src="/images/hexo-inverted.svg" class="brand" alt="树熊与浆果"></div>
     </div>
     <div class="video-learn-more">
       <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
@@ -55,6 +55,336 @@
       
       <h1 class="page-type-title"></h1>
       
+        
+          <article id="post-我们与恶的距离" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/">我们与恶的距离</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/" class="article-date">
+  <time datetime="2020-08-19T15:44:00.000Z" itemprop="datePublished">2020-08-19</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354477202&auto=1&height=32"></iframe>
+
+<blockquote>
+<p>所以，爱会消失对不对</p>
+</blockquote>
+<p><img src="/images/lovewillgone.png" alt="avatar"></p>
+<p>因为一个梗，看了忘了多久之前在热搜看过的的剧，我们与恶的距离，看的时候太压抑了，幸好最后一集是个good ending，happy就算了，毕竟还是个悲剧。<br>看完其实没啥感想，用几个关键词总结一下吧，特殊群体，无良媒体，网络暴力，亲子关系，命运，爱</p>
+<ul>
+<li><p>人生近看是悲剧，远看是喜剧</p>
+</li>
+<li><p>人类的悲欢并不相通，我只是觉得他们吵闹</p>
+</li>
+<li><p>当你在凝视深渊的时候，深渊也正在凝视着你</p>
+</li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/" data-id="cke1l9i9x000iw8sz8nye9mux" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-前端分页" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/">前端分页</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/" class="article-date">
+  <time datetime="2020-08-19T15:32:24.000Z" itemprop="datePublished">2020-08-19</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h2 id="前端分页（dsTable为数据源）"><a href="#前端分页（dsTable为数据源）" class="headerlink" title="前端分页（dsTable为数据源）"></a>前端分页（dsTable为数据源）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var result &#x3D; [];</span><br><span class="line">for(var i&#x3D;0,j&#x3D;this.dsTable.length;i&lt;j;i +&#x3D; _this.pageSize)&#123;</span><br><span class="line">    result.push(this.dsTable.slice(i,i + _this.pageSize));</span><br><span class="line">&#125;</span><br><span class="line">this.dsTable &#x3D; [];</span><br><span class="line">this.dsTable &#x3D; result[_this.currentPage -1];</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>New:在第二页查询的时候会出问题，要加判断 当前数据长度是否大于pagesize，大于再分页，不大于就把当前页置为1，再分页</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(_this.dsTable.length &gt; _this.pageSize)&#123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">_this.currentPage &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/" data-id="cke1l9i9u000fw8sz3ncbbsa1" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-echarts&amp;dojo&amp;兼容总结" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/">echarts,dojo和兼容问题</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-08-19T12:54:24.000Z" itemprop="datePublished">2020-08-19</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <ol>
+<li><p>echarts图表的使用<br><a target="_blank" rel="noopener" href="https://www.echartsjs.com/en/option.html#title">https://www.echartsjs.com/en/option.html#title</a></p>
+</li>
+<li><p>dojo （connect hitch xhrPost）<br><a target="_blank" rel="noopener" href="https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/">https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/</a></p>
+</li>
+<li><p>div+css布局<br>分块浮动<br> 大的：margin:0 padding:0 position:absolute<br> 小的：float：left</p>
+</li>
+<li><p>1960向1440兼容的方法（响应式布局）<br>主要是样式的问题，解决办法就是在css上加上media监听事件<br>@media screen and (max-width:1920px){}<br>@media screen and (max-width:1440px){}<br>分辨率大的放在前头</p>
+</li>
+<li><p>ie11向ie8兼容的方法<br>echarts把引用的js改成了定制生成时支持ie8的版本<br>剩下的三个问题：<br>（1）图表on点击事件无效<br> Javascript 中, 函数不与定义它们的上下文即作用域绑定<br> 在myChart.on(‘onclick’,function(params){})中加入hitch<br> 即myChart.on(‘onclick’,dojo.hitch(this,function(params){}))<br>（2）样式没加载进来，后来发现是因为ie8不支持@media事件<br> 引入一个respond.min.js<br> 注意：①要在css后引用</p>
+<pre><code>   ②media格式必须是 @media screen and (max-width:1440px)</code></pre>
+<p>（3）图表会覆盖弹出框<br> 将图表页面的z-index设为1即阻止覆盖</p>
+</li>
+</ol>
+<ul>
+<li>stack order:<br>  <img src="/images/stackorder.png" alt="avatar"></li>
+</ul>
+<ol start="6">
+<li>attachEvent与addEventListener<br>ie8不支持addEventListener<br>ie11不支持attachEvent<br>所以在在使用监听事件的时候需要加一个判断<br>if(window.attachEvent){<br> bt1.attachEvent(‘on’+”click”,function(){……});  //两个参数<br>}<br>else if(window.addEventListener){<br> bt1.addEventListener(“click”,function(){……},false);  //三个参数<br>}</li>
+</ol>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" data-id="cke1l9i9h0003w8szbi0e1pul" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-联调经验总结1" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/">联调经验总结（一）</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/" class="article-date">
+  <time datetime="2020-08-19T11:54:24.000Z" itemprop="datePublished">2020-08-19</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <p>接口的执行顺序  实际操作发现 接口一般会执行两次  第一次过一遍，第二次进去，所以常常不会按照你写接口的顺序走，就容易出现 顺序不对，数据加载没按照想的来</p>
+<p>解决办法，在需要接口数据的时候做好判断，严格控制接口执行的顺序</p>
+<p>还有，在html代码直接判断的时候 一定要对判断条件里的数据 做非空判断，否则容易报错</p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/" data-id="cke1l9ia1000mw8sz0trad8jr" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-前端工作顺序" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/">前端工作顺序总结</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/" class="article-date">
+  <time datetime="2020-08-18T14:54:24.000Z" itemprop="datePublished">2020-08-18</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <p><img src="/images/workorder.png" alt="avatar"></p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/" data-id="cke1l9i9v000gw8sz4bjs211d" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
         
           <article id="post-常用调试工具和抓包工具" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
@@ -176,7 +506,64 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" data-id="ckdymrtf6000e4ssz5shbgjnp" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" data-id="cke1l9i9w000hw8sz2o62cfe4" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-js数组内容排序" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/">js数组对象以某一对象排序</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/" class="article-date">
+  <time datetime="2020-08-16T14:54:24.000Z" itemprop="datePublished">2020-08-16</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">this.tableData.sort(this.compare(&#39;formateDate&#39;))</span><br><span class="line">    compare(property)&#123;  </span><br><span class="line">        return function(a,b)&#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/" data-id="cke1l9i9p000aw8sz53f2esw8" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -304,7 +691,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="ckdymrtep00014ssz8k5s7qaj" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="cke1l9i9k0005w8sz11escicg" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -363,7 +750,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckdymrtf9000h4sszdcc63pwc" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="cke1l9i9z000lw8szci9l3jcu" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -430,589 +817,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckdymrtf5000d4sszhxkkdfb2" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-手撕vue源码day01" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/">手撕vue源码-day-1</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" class="article-date">
-  <time datetime="2020-08-04T06:54:24.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><ul>
-<li><p>作用：静态类型检查</p>
-<ul>
-<li>什么是静态类型检查？在编译期尽早发现（由类型错误引起的）bug</li>
-</ul>
-</li>
-<li><p>检查方法：</p>
-<ul>
-<li>直接向变量里传值来推断</li>
-<li>写好类型注释，在向变量里传值 例：x: number</li>
-</ul>
-</li>
-<li><p>遇到flow不认识的第三方库解决办法：<code>libdef</code> 的概念（没看懂=_=）</p>
-</li>
-</ul>
-<blockquote>
-<p>Weex：使用流行的Web开发体验来开发高性能原生应用（Android,IOS,Web）的框架</p>
-</blockquote>
-<h2 id="vue-js源码目录"><a href="#vue-js源码目录" class="headerlink" title="vue.js源码目录"></a>vue.js源码目录</h2><h3 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h3><blockquote>
-<p>ast 语法树：抽象语法树，不依赖于具体的文法，不依赖于语言的细节</p>
-</blockquote>
-<p>包含vue.js所有编译相关的代码</p>
-<h3 id="core"><a href="#core" class="headerlink" title="core"></a>core</h3><p>包含vue.js的核心代码：</p>
-<ul>
-<li><p>内置组件</p>
-</li>
-<li><p>全局API封装</p>
-</li>
-<li><p>Vue实例化</p>
-</li>
-<li><p>观察者</p>
-</li>
-<li><p>虚拟DOM</p>
-</li>
-<li><p>工具函数</p>
-</li>
-<li><p>等</p>
-</li>
-</ul>
-<h3 id="platform"><a href="#platform" class="headerlink" title="platform"></a>platform</h3><p>Vue.js是跨平台的mvvm框架，可以跑在web上也可以配合weex跑在native客户端上</p>
-<blockquote>
-<p>native:原生app</p>
-</blockquote>
-<p>to be continue <a target="_blank" rel="noopener" href="https://ustbhuangyi.github.io/vue-analysis/v2/prepare/directory.html#server">https://ustbhuangyi.github.io/vue-analysis/v2/prepare/directory.html#server</a></p>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckdymrtf7000f4ssz1x5e9rsz" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-el-table分页" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/04/el-table%E5%88%86%E9%A1%B5/">el-table分页</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/04/el-table%E5%88%86%E9%A1%B5/" class="article-date">
-  <time datetime="2020-08-04T05:54:24.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <blockquote>
-<p>注意：total一定要赋值</p>
-</blockquote>
-<ol>
-<li>el-table属性</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:data&#x3D;&quot;tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>分页代码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;text-align: center;margin-top: 30px;&quot;&gt;</span><br><span class="line">    &lt;el-pagination</span><br><span class="line">        background</span><br><span class="line">        layout&#x3D;&quot;prev, pager, next&quot;</span><br><span class="line">        :total&#x3D;&quot;total&quot;</span><br><span class="line">        @current-change&#x3D;&quot;current_change&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-pagination&gt;</span><br><span class="line">&lt;&#x2F;div</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>data中定义</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">total: 0,</span><br><span class="line">pagesize: 10,</span><br><span class="line">currentPage: 1</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>methods中定义</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">current_change: function (currentPage) &#123;</span><br><span class="line">    this.currentPage &#x3D; currentPage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckdymrtew00054sszgy3q5lh6" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-components" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/03/components/">vue页面组件化-父子组件传值</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/03/components/" class="article-date">
-  <time datetime="2020-08-03T11:54:24.000Z" itemprop="datePublished">2020-08-03</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <blockquote>
-<p>页面组件化涉及到父子组件传值的问题，需要用到props和emit</p>
-</blockquote>
-<ul>
-<li>父组件引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Dialog</span><br><span class="line">    :dialogVisible&#x3D;&quot;visible&quot;   &#x2F;&#x2F;需要向子组件传值的属性</span><br><span class="line">    :title&#x3D;&quot;title&quot;</span><br><span class="line">:width&#x3D;&quot;width&quot;</span><br><span class="line">    @changeVisible&#x3D;&quot;changeV&quot;   &#x2F;&#x2F;子组件向父组件传值及操作的途径方法</span><br><span class="line">&#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Dialog from &quot;@&#x2F;newsModules&#x2F;noticeDialog&quot;;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Dialog</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data里</span><br><span class="line">visible：false,</span><br><span class="line">title:&quot;&quot;,</span><br><span class="line">width:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">changeV(e) &#123;</span><br><span class="line">    this.visible &#x3D; e;    &#x2F;&#x2F;e是从子组件传过来的值</span><br><span class="line">    this.getNoticeData(); &#x2F;&#x2F;子组件传值的同时调用父组件的初始化方法来刷新父组件的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>子组件定义</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">balabala(组件代码)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;    &#x2F;&#x2F;用props定义需要从父组件接收值的变量</span><br><span class="line">    dialogVisible: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    width: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;把false作为值传给changeVisible方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckdymrteu00044ssz6qlygm76" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-搭建博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo博客安装</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-08-03T11:54:24.000Z" itemprop="datePublished">2020-08-03</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
-<li>node -v</li>
-</ul>
-<h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><ul>
-<li>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></li>
-</ul>
-<h3 id="安装hexo组件，启动博客"><a href="#安装hexo组件，启动博客" class="headerlink" title="安装hexo组件，启动博客"></a>安装hexo组件，启动博客</h3><ol>
-<li>cnpm install -g hexo-cli</li>
-<li>mkdir blog </li>
-<li>cd blog</li>
-<li>hexo init</li>
-<li>hexo s //启动</li>
-<li>hexo n “xxx” //新建博文</li>
-<li>hexo clean //清理一下</li>
-<li>hexo g //重新生成一下</li>
-<li>hexo s //再启动看效果</li>
-</ol>
-<h3 id="配到github"><a href="#配到github" class="headerlink" title="配到github"></a>配到github</h3><ol>
-<li>注册github账号</li>
-<li>new repository<br>名字必须是 github名.github.io</li>
-<li>create</li>
-<li>cnpm install –save hexo-deployer-git</li>
-<li>编辑_config.yml<pre><code>最后一行，deploy:
-type:git
-repo: https://github.com/xxx/xxx.github.io.git
-branch: master</code></pre>
-</li>
-<li>保存</li>
-<li>hexo d</li>
-<li>输入账号，密码</li>
-<li>刷新，博客的内容就出来了</li>
-<li>访问<a target="_blank" rel="noopener" href="https://xxx.github.io/">https://xxx.github.io</a> 就能看见你的博客了</li>
-</ol>
-<h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><ol>
-<li>在网上找到要的hexo主题的github地址</li>
-<li>git clone xxxxx  themes/xxx</li>
-<li>修改_config.yml</li>
-<li>找到theme那一行<br>theme: xxx  </li>
-<li>hexo clean </li>
-<li>hexo g</li>
-<li>hexo s<br>主题就上去了</li>
-<li>hexo d<br>等一会儿，访问github.io就行了</li>
-</ol>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckdymrtf8000g4sszbeq0ekix" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-addkey" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/01/addkey/">sql server证书加密解密</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/01/addkey/" class="article-date">
-  <time datetime="2020-08-01T11:54:24.000Z" itemprop="datePublished">2020-08-01</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h2 id="加密前"><a href="#加密前" class="headerlink" title="加密前"></a>加密前</h2><ul>
-<li>drop 了证书和对称密钥</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li></li>
-</ol>
-<ul>
-<li>use dbname;</li>
-<li>–创建master key</li>
-<li>CREATE MASTER KEY ENCRYPTION BY PASSWORD =’password’;</li>
-</ul>
-<ol start="2">
-<li></li>
-</ol>
-<ul>
-<li>use dbname;</li>
-<li>–创建证书</li>
-<li>CREATE CERTIFICATE 证书名字 </li>
-<li>with SUBJECT = ‘Certificate’</li>
-<li>GO</li>
-</ul>
-<ol start="3">
-<li></li>
-</ol>
-<ul>
-<li>use dbname;</li>
-<li>–由证书加密对称密钥</li>
-<li>CREATE SYMMETRIC KEY 密钥名字</li>
-<li>WITH ALGORITHM = AES_256</li>
-<li>ENCRYPTION BY CERTIFICATE 证书名字;</li>
-<li>GO</li>
-</ul>
-<ol start="4">
-<li></li>
-</ol>
-<ul>
-<li>use dbname;</li>
-<li>–打开对称密钥</li>
-<li>OPEN SYMMETRIC KEY 密钥名字 DECRYPTION BY CERTIFICATE 证书名字;</li>
-</ul>
-<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wolfocme110/p/4016035.html">https://www.cnblogs.com/wolfocme110/p/4016035.html</a></li>
-</ul>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckdymrtet00034sszcaywb7s5" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-tips" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/07/30/tips/">近期总结前端知识</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/07/30/tips/" class="article-date">
-  <time datetime="2020-07-30T11:54:24.000Z" itemprop="datePublished">2020-07-30</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h2 id="不同分辨率动态赋值"><a href="#不同分辨率动态赋值" class="headerlink" title="不同分辨率动态赋值"></a>不同分辨率动态赋值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if (window.innerWidth &gt; 1440) &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;27.5%&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.dialogwidth &#x3D; &quot;37%&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dialogwidth:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="table批量删除选中行"><a href="#table批量删除选中行" class="headerlink" title="table批量删除选中行"></a>table批量删除选中行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let rows &#x3D; this.$refs.tableRefName.getSelectAllRows();</span><br><span class="line">let ids &#x3D; [];</span><br><span class="line">rows.forEach(item &#x3D;&gt; ids.push(item.id));</span><br><span class="line">api.delete(ids,response&#x3D;&gt;&#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="动态切换组件"><a href="#动态切换组件" class="headerlink" title="动态切换组件"></a>动态切换组件</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liangmengbk/article/details/85013547">https://blog.csdn.net/liangmengbk/article/details/85013547</a></p>
-<h2 id="table组件-写columns-属性时render自定义内容"><a href="#table组件-写columns-属性时render自定义内容" class="headerlink" title="table组件 写columns 属性时render自定义内容"></a>table组件 写columns 属性时render自定义内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">prop: &quot;action&quot;,</span><br><span class="line">label: this.$t(&quot;noticePage.OPERATE&quot;),</span><br><span class="line">align: &quot;center&quot;,</span><br><span class="line">tableWidth: 260,</span><br><span class="line">render: (createElement, params) &#x3D;&gt; &#123;</span><br><span class="line">    return createElement(&quot;div&quot;, [</span><br><span class="line">        createElement(</span><br><span class="line">            &quot;td-button&quot;,</span><br><span class="line">            &#123;</span><br><span class="line">                style: &quot;min-width:25px !important&quot;,</span><br><span class="line">                attrs: &#123;</span><br><span class="line">                    type: &quot;text&quot;</span><br><span class="line">                &#125;,</span><br><span class="line"></span><br><span class="line">                on: &#123;</span><br><span class="line">                    click: _ &#x3D;&gt; &#123;</span><br><span class="line">                        this.openDialog(params.row);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;编辑&quot;</span><br><span class="line">        )</span><br><span class="line">    ]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="日期组件"><a href="#日期组件" class="headerlink" title="日期组件"></a>日期组件</h2><ul>
-<li>日期限制</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">pickerBeginDateBefore: &#123;</span><br><span class="line">    disabledDate: time &#x3D;&gt; &#123;</span><br><span class="line">        let beginDateVal &#x3D; new Date(this.ruleForm.patrolEndTime).getTime();</span><br><span class="line">        if (beginDateVal) &#123;</span><br><span class="line">            return time.getTime() &gt; beginDateVal;   &#x2F;&#x2F;开始日期小于结束日期</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">pickerBeginDateAfter: &#123;</span><br><span class="line">    disabledDate: time &#x3D;&gt; &#123;</span><br><span class="line">        let beginDateVal &#x3D; new Date(this.ruleForm.patrolStartTime).getTime();</span><br><span class="line">        if (beginDateVal) &#123;</span><br><span class="line">            return (                &#x2F;&#x2F;结束日期大于开始日期且小于开始日期加7天</span><br><span class="line">                time.getTime() &lt; beginDateVal - 24 * 60 * 60 * 1000 ||</span><br><span class="line">                time.getTime() &gt; beginDateVal + 30 * 24 * 60 * 60 * 1000</span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41910848/article/details/82218243">https://blog.csdn.net/weixin_41910848/article/details/82218243</a></p>
-<h2 id="添加和更新调同一个组件时的判断"><a href="#添加和更新调同一个组件时的判断" class="headerlink" title="添加和更新调同一个组件时的判断"></a>添加和更新调同一个组件时的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if (this.title &#x3D;&#x3D; &quot;添加&quot;) &#123;</span><br><span class="line">    this.addItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.editItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dialogClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;关闭</span><br><span class="line">    this.$emit(&quot;changeData&quot;);             &#x2F;&#x2F;刷新</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">schedulingListTemp.forEach((element) &#x3D;&gt; &#123;</span><br><span class="line">    var patrolUserIdTemp &#x3D; element.patrolUserId;</span><br><span class="line">    var item &#x3D; response.data.content.filter(</span><br><span class="line">      (t) &#x3D;&gt; t.id &#x3D;&#x3D; patrolUserIdTemp</span><br><span class="line">    );</span><br><span class="line">    if (item.length !&#x3D; 0) &#123;</span><br><span class="line">      var temp &#x3D; &#123;&#125;;</span><br><span class="line">      temp.patrolPName &#x3D; item[0].name;</span><br><span class="line">      temp.patrolPNameShow &#x3D;</span><br><span class="line">        item[0].name + &quot;(&quot; + item[0].personNo + &quot;)&quot;;</span><br><span class="line">      temp.patrolPeopleOrganizetion &#x3D; item[0].deptName;</span><br><span class="line">      temp.patrolRouteText &#x3D; element.patrolRouteText;</span><br><span class="line">      temp.patrolBeginTime &#x3D; element.patrolBeginTime;</span><br><span class="line">      temp.patrolEndTime &#x3D; element.patrolEndTime;</span><br><span class="line">      temp.patrolUserId &#x3D; element.patrolUserId;</span><br><span class="line">      temp.patrolLineId &#x3D; element.patrolLineId;</span><br><span class="line">      _this.schedulingList.push(temp);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      var temp2 &#x3D; &#123;&#125;;</span><br><span class="line">      temp2.patrolPName &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolPNameShow &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolPeopleOrganizetion &#x3D; &quot;&quot;;</span><br><span class="line">      temp2.patrolRouteText &#x3D; element.patrolRouteText;</span><br><span class="line">      temp2.patrolBeginTime &#x3D; element.patrolBeginTime;</span><br><span class="line">      temp2.patrolEndTime &#x3D; element.patrolEndTime;</span><br><span class="line">      temp2.patrolUserId &#x3D; element.patrolUserId;</span><br><span class="line">      temp2.patrolLineId &#x3D; element.patrolLineId;</span><br><span class="line">      _this.schedulingList.push(temp2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加和更新调同一个组件时的判断-1"><a href="#添加和更新调同一个组件时的判断-1" class="headerlink" title="添加和更新调同一个组件时的判断"></a>添加和更新调同一个组件时的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if (this.title &#x3D;&#x3D; &quot;添加&quot;) &#123;</span><br><span class="line">    this.addItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    this.editItems();</span><br><span class="line">    this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">        this.dialogClose();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dialogClose() &#123;</span><br><span class="line">    this.$emit(&quot;changeVisible&quot;, false);  &#x2F;&#x2F;关闭</span><br><span class="line">    this.$emit(&quot;changeData&quot;);             &#x2F;&#x2F;刷新</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">getCurrentDate () &#123;</span><br><span class="line">    var date &#x3D; new Date();</span><br><span class="line">    var year &#x3D; date.getFullYear();</span><br><span class="line">    var month &#x3D; date.getMonth() + 1;</span><br><span class="line">    var day &#x3D; date.getDate();</span><br><span class="line">    var hour &#x3D; date.getHours();</span><br><span class="line">    var minute &#x3D; date.getMinutes();</span><br><span class="line">    var second &#x3D; date.getSeconds();</span><br><span class="line">    if (month &lt; 10) &#123;</span><br><span class="line">        month &#x3D; &quot;0&quot; + month;</span><br><span class="line">    &#125;</span><br><span class="line">    if (day &lt; 10) &#123;</span><br><span class="line">        day &#x3D; &quot;0&quot; + day;</span><br><span class="line">    &#125;</span><br><span class="line">    if (hour &lt; 10) &#123;</span><br><span class="line">        hour &#x3D; &quot;0&quot; + hour;</span><br><span class="line">    &#125;</span><br><span class="line">    if (minute &lt; 10) &#123;</span><br><span class="line">        minute &#x3D; &quot;0&quot; + minute;</span><br><span class="line">    &#125;</span><br><span class="line">    if (second &lt; 10) &#123;</span><br><span class="line">        second &#x3D; &quot;0&quot; + second;</span><br><span class="line">    &#125;</span><br><span class="line">    var nowDate &#x3D;</span><br><span class="line">    year +</span><br><span class="line">    &quot;-&quot; +</span><br><span class="line">    month +</span><br><span class="line">    &quot;-&quot; +</span><br><span class="line">    day +</span><br><span class="line">    &quot; &quot; +</span><br><span class="line">    hour +</span><br><span class="line">    &quot;:&quot; +</span><br><span class="line">    minute +</span><br><span class="line">    &quot;:&quot; +</span><br><span class="line">    second;</span><br><span class="line">    return nowDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>明天</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var tomrrowDay &#x3D; new Date(</span><br><span class="line">        new Date().setDate(new Date().getDate() + 1)</span><br><span class="line">      ).format(&quot;yyyy-MM-dd 00:00:00&quot;);</span><br><span class="line">      </span><br></pre></td></tr></table></figure>
-
-<h2 id="组件强制刷新技巧"><a href="#组件强制刷新技巧" class="headerlink" title="组件强制刷新技巧"></a>组件强制刷新技巧</h2><blockquote>
-<p> 在实际开发过程中经常会遇到动态取值之后vue组件不能刷新的问题，解决办法就是利用v-if，改变状态，强制刷新</p>
-</blockquote>
-<ul>
-<li>在要刷新的组件上定义v-if=”hackReset”</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-if&#x3D;&quot;hackReset&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>data里定义变量</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hackReset: true</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在需要刷新的位置加上刷新代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.hackReset &#x3D; false;</span><br><span class="line">this.$nextTick(() &#x3D;&gt; &#123;</span><br><span class="line">    this.hackReset &#x3D; true;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="匹配拼接"><a href="#匹配拼接" class="headerlink" title="匹配拼接"></a>匹配拼接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">for (var i &#x3D; 0; i &lt; _this.patrolPeople.length; i++) &#123;</span><br><span class="line">          if (_this.patrolPeople[i].patrolPName.match(_this.patrolUserName)) &#123;</span><br><span class="line">            userIdTempArray.push(_this.patrolPeople[i].patrolPId);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        userId &#x3D; userIdTempArray.join(&quot;,&quot;);</span><br><span class="line">        if (userId &#x3D;&#x3D;&#x3D; &quot;&quot;) &#123;</span><br><span class="line">          _this.schedulingList &#x3D; [];</span><br><span class="line">          _this.total &#x3D; 0;</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="object对象取key和value"><a href="#object对象取key和value" class="headerlink" title="object对象取key和value"></a>object对象取key和value</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">licenseN &#x3D; Object.keys(row.action.licenseNumberMap);</span><br><span class="line">                        statusN &#x3D; Object.values(row.action.licenseNumberMap);</span><br></pre></td></tr></table></figure>
-
-<h2 id="table中列值动态赋样式"><a href="#table中列值动态赋样式" class="headerlink" title="table中列值动态赋样式"></a>table中列值动态赋样式</h2><ul>
-<li>根据每一列alert0show,alert1show,alert3show的值来确定显示哪个图标</li>
-<li>根据每一列patrolAlarm的值来设定文字的样式  （动态赋class,class里定义样式）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column prop&#x3D;&quot;patrolAlarm&quot;  width&#x3D;&quot;148&quot; align&#x3D;&quot;center&quot;&gt;</span><br><span class="line">    &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-success&quot; v-show&#x3D;&quot;scope.row.alert0show&quot; style&#x3D;&quot;color:#7E9913&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-warning&quot; v-show&#x3D;&quot;scope.row.alert1show&quot; style&#x3D;&quot;color:#FA4F4F&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;el-icon-time&quot; v-show&#x3D;&quot;scope.row.alert3show&quot; style&#x3D;&quot;color:#7E9913&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;</span><br><span class="line">    &lt;span</span><br><span class="line">    :class&#x3D;&quot;((scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;1&#39;) || (scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;4&#39;) || (scope.row.patrolAlarm &#x3D;&#x3D;&#x3D; &#39;5&#39;)) ? &#39;redColor&#39;:&#39;greenColor&#39;&quot;</span><br><span class="line">    &gt;&#123;&#123;scope.row.sAlertType&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">listUnique(array) &#123;</span><br><span class="line">      var r &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0, l &#x3D; array.length; i &lt; l; i++) &#123;</span><br><span class="line">        for (var j &#x3D; i + 1; j &lt; l; j++)</span><br><span class="line">          if (JSON.stringify(array[i]) &#x3D;&#x3D; JSON.stringify(array[j])) j &#x3D; ++i;</span><br><span class="line">        r.push(array[i]);</span><br><span class="line">      &#125;</span><br><span class="line">      return r;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">unique(arr) &#123;</span><br><span class="line">      var hash &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (hash.indexOf(arr[i]) &#x3D;&#x3D; -1) &#123;</span><br><span class="line">          hash.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return hash;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckdymrtf0000a4ssz56egaooc" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="cke1l9i9y000kw8sz4xqfbuqo" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -1034,7 +839,7 @@ branch: master</code></pre>
   
     
       <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next</a>
       </nav>
     
   </section>
@@ -1052,7 +857,7 @@ branch: master</code></pre>
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2020 HuangBin&#39;s Blog</li>
+      <li>&copy; 2020 树熊与浆果</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>
@@ -1065,7 +870,7 @@ branch: master</code></pre>
 <nav class="navbar">
   
     <div class="logo">
-      <a href="/"><img src="/images/hexo.svg" alt="HuangBin&#39;s Blog"></a>
+      <a href="/"><img src="/images/hexo.svg" alt="树熊与浆果"></a>
     </div>
   
   <ul class="nav nav-main">

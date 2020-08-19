@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    w3c学习 |
+    echarts,dojo和兼容问题 |
     
     树熊与浆果</title>
   
@@ -29,14 +29,14 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-W3C学习" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-echarts&amp;dojo&amp;兼容总结" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
             <header class="article-header">
                 
   
     <h1 class="article-title" itemprop="name">
-      w3c学习
+      echarts,dojo和兼容问题
     </h1>
   
   
@@ -49,8 +49,8 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2020-08-12T11:54:24.000Z" itemprop="datePublished">2020-08-12</time>
+                        <a href="/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-08-19T12:54:24.000Z" itemprop="datePublished">2020-08-19</time>
 </a>
                             
                     </div>
@@ -58,8 +58,6 @@
 
                         
                             
-    <div class="tocbot"></div>
-
 
 
 
@@ -73,82 +71,31 @@
                                             
 
                                                 
-                                                                    <h1 id="W3C"><a href="#W3C" class="headerlink" title="W3C"></a>W3C</h1><blockquote>
-<p>万维网联盟</p>
-</blockquote>
-<h2 id="结构标准语言"><a href="#结构标准语言" class="headerlink" title="结构标准语言"></a>结构标准语言</h2><ol>
-<li><p>可扩展标记语言 —-XML</p>
-<ul>
-<li><p>宗旨：传输和存储数据</p>
+                                                                    <ol>
+<li><p>echarts图表的使用<br><a target="_blank" rel="noopener" href="https://www.echartsjs.com/en/option.html#title">https://www.echartsjs.com/en/option.html#title</a></p>
 </li>
-<li><p>特点：</p>
-<ul>
-<li><p>没有预定义标签</p>
+<li><p>dojo （connect hitch xhrPost）<br><a target="_blank" rel="noopener" href="https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/">https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/</a></p>
 </li>
-<li><p>必须有关闭标签</p>
+<li><p>div+css布局<br>分块浮动<br> 大的：margin:0 padding:0 position:absolute<br> 小的：float：left</p>
 </li>
-<li><p>对大小写敏感</p>
+<li><p>1960向1440兼容的方法（响应式布局）<br>主要是样式的问题，解决办法就是在css上加上media监听事件<br>@media screen and (max-width:1920px){}<br>@media screen and (max-width:1440px){}<br>分辨率大的放在前头</p>
 </li>
-<li><p>属性值必须加引号</p>
-</li>
-<li><p>实体符号必须引用</p>
-</li>
-<li><p>空格会保留</p>
-</li>
-</ul>
-</li>
-<li><p>结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;root&gt; &#x2F;&#x2F;必须包含根元素</span><br><span class="line">&lt;child&gt;</span><br><span class="line">&lt;subchild&gt;.....&lt;&#x2F;subchild&gt;</span><br><span class="line">&lt;&#x2F;child&gt;</span><br><span class="line">&lt;&#x2F;root&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>DTD</p>
-<ul>
-<li>定义xml结构</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE root</span><br><span class="line">[</span><br><span class="line">&lt;!ELEMENT root (child,subchild)&gt;</span><br><span class="line">&lt;!ELEMENT child (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT subchild (#PCDATA)&gt;</span><br><span class="line">]&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Schema</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;xs:element name&#x3D;&quot;root&quot;&gt;</span><br><span class="line">&lt;xs:complexType&gt;</span><br><span class="line">&lt;xs:sequence&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;child&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;subchild&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;xs:sequence&gt;</span><br><span class="line">&lt;&#x2F;xs:complexType&gt;</span><br><span class="line">&lt;&#x2F;xs:element&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>XMLHttpRequest对象</p>
-<ul>
-<li>在后台与服务器交换数据</li>
-</ul>
-</li>
-<li><p>XML解析器</p>
-</li>
-<li><p>XML DOM</p>
-<ul>
-<li>document.getElementById(“to”).innerHTML=<br>xmlDoc.getElementsByTagName(“to”)[0].childNodes[0].nodeValue;</li>
-</ul>
-</li>
-</ul>
+<li><p>ie11向ie8兼容的方法<br>echarts把引用的js改成了定制生成时支持ie8的版本<br>剩下的三个问题：<br>（1）图表on点击事件无效<br> Javascript 中, 函数不与定义它们的上下文即作用域绑定<br> 在myChart.on(‘onclick’,function(params){})中加入hitch<br> 即myChart.on(‘onclick’,dojo.hitch(this,function(params){}))<br>（2）样式没加载进来，后来发现是因为ie8不支持@media事件<br> 引入一个respond.min.js<br> 注意：①要在css后引用</p>
+<pre><code>   ②media格式必须是 @media screen and (max-width:1440px)</code></pre>
+<p>（3）图表会覆盖弹出框<br> 将图表页面的z-index设为1即阻止覆盖</p>
 </li>
 </ol>
-<ol start="2">
-<li><p>可扩展超文本编辑语言 —-XHTML</p>
 <ul>
-<li>特点：<ul>
-<li>XHTML 元素必须被正确地嵌套。</li>
-<li>XHTML 元素必须被关闭。</li>
-<li>标签名必须用小写字母。</li>
-<li>XHTML 文档必须拥有根元素</li>
+<li>stack order:<br>  <img src="/images/stackorder.png" alt="avatar"></li>
 </ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="表现标准语言"><a href="#表现标准语言" class="headerlink" title="表现标准语言"></a>表现标准语言</h2><ul>
-<li>层叠样式表 —-CSS(2,3)</li>
-</ul>
-<h2 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h2><ol>
-<li>文档对象模型 —-DOM</li>
-<li>ECMASscript</li>
+<ol start="6">
+<li>attachEvent与addEventListener<br>ie8不支持addEventListener<br>ie11不支持attachEvent<br>所以在在使用监听事件的时候需要加一个判断<br>if(window.attachEvent){<br> bt1.attachEvent(‘on’+”click”,function(){……});  //两个参数<br>}<br>else if(window.addEventListener){<br> bt1.addEventListener(“click”,function(){……},false);  //三个参数<br>}</li>
 </ol>
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="cke1l9i9k0005w8sz11escicg" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" data-id="cke1l9i9h0003w8szbi0e1pul" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -163,19 +110,19 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/" class="article-nav-link">
+      <a href="/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/" class="article-nav-link">
         <strong class="article-nav-caption">Newer</strong>
         <div class="article-nav-title">
           
-            js数组对象以某一对象排序
+            前端分页
           
         </div>
       </a>
     
     
-      <a href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" class="article-nav-link">
+      <a href="/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/" class="article-nav-link">
         <strong class="article-nav-caption">Older</strong>
-        <div class="article-nav-title">滚动条与图片移动</div>
+        <div class="article-nav-title">联调经验总结（一）</div>
       </a>
     
   </nav>
