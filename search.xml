@@ -155,6 +155,31 @@
 ]]></content>
   </entry>
   <entry>
+    <title>echarts,dojo和兼容问题</title>
+    <url>/2020/08/19/echarts&amp;dojo&amp;%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
+<li><p>echarts图表的使用<br><a href="https://www.echartsjs.com/en/option.html#title">https://www.echartsjs.com/en/option.html#title</a></p>
+</li>
+<li><p>dojo （connect hitch xhrPost）<br><a href="https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/">https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/</a></p>
+</li>
+<li><p>div+css布局<br>分块浮动<br> 大的：margin:0 padding:0 position:absolute<br> 小的：float：left</p>
+</li>
+<li><p>1960向1440兼容的方法（响应式布局）<br>主要是样式的问题，解决办法就是在css上加上media监听事件<br>@media screen and (max-width:1920px){}<br>@media screen and (max-width:1440px){}<br>分辨率大的放在前头</p>
+</li>
+<li><p>ie11向ie8兼容的方法<br>echarts把引用的js改成了定制生成时支持ie8的版本<br>剩下的三个问题：<br>（1）图表on点击事件无效<br> Javascript 中, 函数不与定义它们的上下文即作用域绑定<br> 在myChart.on(‘onclick’,function(params){})中加入hitch<br> 即myChart.on(‘onclick’,dojo.hitch(this,function(params){}))<br>（2）样式没加载进来，后来发现是因为ie8不支持@media事件<br> 引入一个respond.min.js<br> 注意：①要在css后引用</p>
+<pre><code>   ②media格式必须是 @media screen and (max-width:1440px)</code></pre>
+<p>（3）图表会覆盖弹出框<br> 将图表页面的z-index设为1即阻止覆盖</p>
+</li>
+</ol>
+<ul>
+<li>stack order:<br>  <img src="/images/stackorder.png" alt="avatar"></li>
+</ul>
+<ol start="6">
+<li>attachEvent与addEventListener<br>ie8不支持addEventListener<br>ie11不支持attachEvent<br>所以在在使用监听事件的时候需要加一个判断<br>if(window.attachEvent){<br> bt1.attachEvent(‘on’+”click”,function(){……});  //两个参数<br>}<br>else if(window.addEventListener){<br> bt1.addEventListener(“click”,function(){……},false);  //三个参数<br>}</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>el-table分页</title>
     <url>/2020/08/04/el-table%E5%88%86%E9%A1%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -180,31 +205,6 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">current_change: function (currentPage) &#123;</span><br><span class="line">    this.currentPage &#x3D; currentPage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>echarts,dojo和兼容问题</title>
-    <url>/2020/08/19/echarts&amp;dojo&amp;%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
-<li><p>echarts图表的使用<br><a href="https://www.echartsjs.com/en/option.html#title">https://www.echartsjs.com/en/option.html#title</a></p>
-</li>
-<li><p>dojo （connect hitch xhrPost）<br><a href="https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/">https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/</a></p>
-</li>
-<li><p>div+css布局<br>分块浮动<br> 大的：margin:0 padding:0 position:absolute<br> 小的：float：left</p>
-</li>
-<li><p>1960向1440兼容的方法（响应式布局）<br>主要是样式的问题，解决办法就是在css上加上media监听事件<br>@media screen and (max-width:1920px){}<br>@media screen and (max-width:1440px){}<br>分辨率大的放在前头</p>
-</li>
-<li><p>ie11向ie8兼容的方法<br>echarts把引用的js改成了定制生成时支持ie8的版本<br>剩下的三个问题：<br>（1）图表on点击事件无效<br> Javascript 中, 函数不与定义它们的上下文即作用域绑定<br> 在myChart.on(‘onclick’,function(params){})中加入hitch<br> 即myChart.on(‘onclick’,dojo.hitch(this,function(params){}))<br>（2）样式没加载进来，后来发现是因为ie8不支持@media事件<br> 引入一个respond.min.js<br> 注意：①要在css后引用</p>
-<pre><code>   ②media格式必须是 @media screen and (max-width:1440px)</code></pre>
-<p>（3）图表会覆盖弹出框<br> 将图表页面的z-index设为1即阻止覆盖</p>
-</li>
-</ol>
-<ul>
-<li>stack order:<br>  <img src="/images/stackorder.png" alt="avatar"></li>
-</ul>
-<ol start="6">
-<li>attachEvent与addEventListener<br>ie8不支持addEventListener<br>ie11不支持attachEvent<br>所以在在使用监听事件的时候需要加一个判断<br>if(window.attachEvent){<br> bt1.attachEvent(‘on’+”click”,function(){……});  //两个参数<br>}<br>else if(window.addEventListener){<br> bt1.addEventListener(“click”,function(){……},false);  //三个参数<br>}</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
@@ -342,11 +342,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>js数组对象以某一对象排序</title>
-    <url>/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">this.tableData.sort(this.compare(&#39;formateDate&#39;))</span><br><span class="line">    compare(property)&#123;  </span><br><span class="line">        return function(a,b)&#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>技能要求</title>
     <url>/2020/07/19/jobskill/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><p>工作职责<br>-负责企业智能平台部Web前端相关工作<br>-产品易用性改进和Web界面技术优化<br>-目标导向，通过与相关团队的配合推动业务目标的达成<br>-Web前沿技术研究和新技术调研并用于实践<br>任职要求<br>-拥有扎实的计算机基础，计算机或相关专业，2年及以上Web前端研发工作经历<br>-熟悉 W3C 标准，精通HTML5/CSS3，熟练掌握常见的页面布局方式，了解JS/CSS模块化开发<br>-熟练掌握 JavaScript，熟练使用 React/Vue 中的至少一种，掌握面向对象编程思想，对表现与数据分离有深刻理解<br>-熟练使用ES6，TypeScrip<br>-掌握常用的构建打包工具的配置方法，如 Webpack、Rollup、Gulp 等<br>-熟练使用各种调试、抓包工具，能独立分析、解决和归纳问题<br>-有出色的学习能力和强烈的进取心，有良好的沟通能力及执行力，有责任心，有一定的抗压能力<br>-熟悉PHP/NodeJs/HTML5开发，熟练使用Linux系统</p>
@@ -378,6 +373,11 @@
 <li>熟悉PHP/NodeJs/HTML5开发，熟练使用Linux系统</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>js数组对象以某一对象排序</title>
+    <url>/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">this.tableData.sort(this.compare(&#39;formateDate&#39;))</span><br><span class="line">    compare(property)&#123;  </span><br><span class="line">        return function(a,b)&#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>近期总结前端知识</title>
@@ -504,17 +504,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>前端分页</title>
-    <url>/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前端分页（dsTable为数据源）"><a href="#前端分页（dsTable为数据源）" class="headerlink" title="前端分页（dsTable为数据源）"></a>前端分页（dsTable为数据源）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var result &#x3D; [];</span><br><span class="line">for(var i&#x3D;0,j&#x3D;this.dsTable.length;i&lt;j;i +&#x3D; _this.pageSize)&#123;</span><br><span class="line">    result.push(this.dsTable.slice(i,i + _this.pageSize));</span><br><span class="line">&#125;</span><br><span class="line">this.dsTable &#x3D; [];</span><br><span class="line">this.dsTable &#x3D; result[_this.currentPage -1];</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>New:在第二页查询的时候会出问题，要加判断 当前数据长度是否大于pagesize，大于再分页，不大于就把当前页置为1，再分页</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(_this.dsTable.length &gt; _this.pageSize)&#123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">_this.currentPage &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>vue存储全局变量</title>
     <url>/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -530,29 +519,20 @@
 ]]></content>
   </entry>
   <entry>
+    <title>前端分页</title>
+    <url>/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前端分页（dsTable为数据源）"><a href="#前端分页（dsTable为数据源）" class="headerlink" title="前端分页（dsTable为数据源）"></a>前端分页（dsTable为数据源）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var result &#x3D; [];</span><br><span class="line">for(var i&#x3D;0,j&#x3D;this.dsTable.length;i&lt;j;i +&#x3D; _this.pageSize)&#123;</span><br><span class="line">    result.push(this.dsTable.slice(i,i + _this.pageSize));</span><br><span class="line">&#125;</span><br><span class="line">this.dsTable &#x3D; [];</span><br><span class="line">this.dsTable &#x3D; result[_this.currentPage -1];</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>New:在第二页查询的时候会出问题，要加判断 当前数据长度是否大于pagesize，大于再分页，不大于就把当前页置为1，再分页</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(_this.dsTable.length &gt; _this.pageSize)&#123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">_this.currentPage &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
     <title>前端工作顺序总结</title>
     <url>/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/images/workorder.png" alt="avatar"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我们与恶的距离</title>
-    <url>/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354477202&auto=1&height=32"></iframe>
-
-<blockquote>
-<p>所以，爱会消失对不对</p>
-</blockquote>
-<p><img src="/images/lovewillgone.png" alt="avatar"></p>
-<p>因为一个梗，看了忘了多久之前在热搜看过的的剧，我们与恶的距离，看的时候太压抑了，幸好最后一集是个good ending，happy就算了，毕竟还是个悲剧。<br>看完其实没啥感想，用几个关键词总结一下吧，特殊群体，无良媒体，网络暴力，亲子关系，命运，爱</p>
-<ul>
-<li><p>人生近看是悲剧，远看是喜剧</p>
-</li>
-<li><p>人类的悲欢并不相通，我只是觉得他们吵闹</p>
-</li>
-<li><p>当你在凝视深渊的时候，深渊也正在凝视着你</p>
-</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -690,6 +670,46 @@
 ]]></content>
   </entry>
   <entry>
+    <title>我们与恶的距离</title>
+    <url>/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354477202&auto=1&height=32"></iframe>
+
+<blockquote>
+<p>所以，爱会消失对不对</p>
+</blockquote>
+<p><img src="/images/lovewillgone.png" alt="avatar"></p>
+<p>因为一个梗，看了忘了多久之前在热搜看过的的剧，我们与恶的距离，看的时候太压抑了，幸好最后一集是个good ending，happy就算了，毕竟还是个悲剧。<br>看完其实没啥感想，用几个关键词总结一下吧，特殊群体，无良媒体，网络暴力，亲子关系，命运，爱</p>
+<ul>
+<li><p>人生近看是悲剧，远看是喜剧</p>
+</li>
+<li><p>人类的悲欢并不相通，我只是觉得他们吵闹</p>
+</li>
+<li><p>当你在凝视深渊的时候，深渊也正在凝视着你</p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>数组里按时间排序</title>
+    <url>/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数组里按时间排序"><a href="#数组里按时间排序" class="headerlink" title="数组里按时间排序"></a>数组里按时间排序</h2><ol>
+<li>把数组里的时间参数转化成值</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">temp.sorttime &#x3D; new Date(tempList[i].createTime).getTime();</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>对数组里的值进行排序</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">list.sort(this.compare(&quot;sorttime&quot;));</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>compare方法</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compare(property) &#123;</span><br><span class="line">      return function (a, b) &#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo博客安装</title>
     <url>/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
@@ -738,22 +758,9 @@ branch: master</code></pre>
 ]]></content>
   </entry>
   <entry>
-    <title>常用调试工具与抓包工具（一）调试工具</title>
-    <url>/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数组里按时间排序"><a href="#数组里按时间排序" class="headerlink" title="数组里按时间排序"></a>数组里按时间排序</h2><ol>
-<li>把数组里的时间参数转化成值</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">temp.sorttime &#x3D; new Date(tempList[i].createTime).getTime();</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>对数组里的值进行排序</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">list.sort(this.compare(&quot;sorttime&quot;));</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>compare方法</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compare(property) &#123;</span><br><span class="line">      return function (a, b) &#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+    <title>滚动条与图片移动</title>
+    <url>/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -763,13 +770,6 @@ branch: master</code></pre>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>接口的执行顺序  实际操作发现 接口一般会执行两次  第一次过一遍，第二次进去，所以常常不会按照你写接口的顺序走，就容易出现 顺序不对，数据加载没按照想的来</p>
 <p>解决办法，在需要接口数据的时候做好判断，严格控制接口执行的顺序</p>
 <p>还有，在html代码直接判断的时候 一定要对判断条件里的数据 做非空判断，否则容易报错</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>滚动条与图片移动</title>
-    <url>/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
 </search>
