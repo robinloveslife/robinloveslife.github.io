@@ -125,6 +125,28 @@
 ]]></content>
   </entry>
   <entry>
+    <title>好的commit规范</title>
+    <url>/2020/08/30/commit%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><type>(<scope>):<subject></p>
+<p>type:必须，说明commit类别</p>
+<ul>
+<li>feat-新功能</li>
+<li>fix-一次提交修复问题</li>
+<li>to-多次提交最终修复问题</li>
+<li>docs-文档</li>
+<li>style-格式</li>
+<li>refactor-重构</li>
+<li>chore-构建过程或辅助工具变动</li>
+<li>revert-回滚到上一个版本</li>
+<li>merge-代码合并</li>
+<li>sync-同步主线或分支的bug</li>
+</ul>
+<p>scope:可选，说明commit影响的范围</p>
+<p>subject:必须，对commit目的的简短描述，建议使用中文，结尾不加标点符号</p>
+<p>例： fix(DAO):用户查询缺少username属性</p>
+]]></content>
+  </entry>
+  <entry>
     <title>vue页面组件化-父子组件传值</title>
     <url>/2020/08/03/components/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -530,12 +552,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(_this.dsTable.length &gt; _this.pageSize)&#123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">_this.currentPage &#x3D; 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>前端工作顺序总结</title>
-    <url>/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/images/workorder.png" alt="avatar"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>常用调试工具与抓包工具（一）调试工具</title>
     <url>/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h2><blockquote>
@@ -621,6 +637,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>前端工作顺序总结</title>
+    <url>/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/images/workorder.png" alt="avatar"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我们与恶的距离</title>
+    <url>/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354477202&auto=1&height=32"></iframe>
+
+<blockquote>
+<p>所以，爱会消失对不对</p>
+</blockquote>
+<p><img src="/images/lovewillgone.png" alt="avatar"></p>
+<p>因为一个梗，看了忘了多久之前在热搜看过的的剧，我们与恶的距离，看的时候太压抑了，幸好最后一集是个good ending，happy就算了，毕竟还是个悲剧。<br>看完其实没啥感想，用几个关键词总结一下吧，特殊群体，无良媒体，网络暴力，亲子关系，命运，爱</p>
+<ul>
+<li><p>人生近看是悲剧，远看是喜剧</p>
+</li>
+<li><p>人类的悲欢并不相通，我只是觉得他们吵闹</p>
+</li>
+<li><p>当你在凝视深渊的时候，深渊也正在凝视着你</p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>手撕vue源码-day-1</title>
     <url>/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><ul>
@@ -670,46 +712,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>我们与恶的距离</title>
-    <url>/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1354477202&auto=1&height=32"></iframe>
-
-<blockquote>
-<p>所以，爱会消失对不对</p>
-</blockquote>
-<p><img src="/images/lovewillgone.png" alt="avatar"></p>
-<p>因为一个梗，看了忘了多久之前在热搜看过的的剧，我们与恶的距离，看的时候太压抑了，幸好最后一集是个good ending，happy就算了，毕竟还是个悲剧。<br>看完其实没啥感想，用几个关键词总结一下吧，特殊群体，无良媒体，网络暴力，亲子关系，命运，爱</p>
-<ul>
-<li><p>人生近看是悲剧，远看是喜剧</p>
-</li>
-<li><p>人类的悲欢并不相通，我只是觉得他们吵闹</p>
-</li>
-<li><p>当你在凝视深渊的时候，深渊也正在凝视着你</p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>数组里按时间排序</title>
-    <url>/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数组里按时间排序"><a href="#数组里按时间排序" class="headerlink" title="数组里按时间排序"></a>数组里按时间排序</h2><ol>
-<li>把数组里的时间参数转化成值</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">temp.sorttime &#x3D; new Date(tempList[i].createTime).getTime();</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>对数组里的值进行排序</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">list.sort(this.compare(&quot;sorttime&quot;));</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>compare方法</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compare(property) &#123;</span><br><span class="line">      return function (a, b) &#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo博客安装</title>
     <url>/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
@@ -755,6 +757,26 @@ branch: master</code></pre>
 <li>hexo s<br>主题就上去了</li>
 <li>hexo d<br>等一会儿，访问github.io就行了</li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>数组里按时间排序</title>
+    <url>/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="数组里按时间排序"><a href="#数组里按时间排序" class="headerlink" title="数组里按时间排序"></a>数组里按时间排序</h2><ol>
+<li>把数组里的时间参数转化成值</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">temp.sorttime &#x3D; new Date(tempList[i].createTime).getTime();</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>对数组里的值进行排序</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">list.sort(this.compare(&quot;sorttime&quot;));</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>compare方法</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">compare(property) &#123;</span><br><span class="line">      return function (a, b) &#123;</span><br><span class="line">        var value1 &#x3D; a[property];</span><br><span class="line">        var value2 &#x3D; b[property];</span><br><span class="line">        return value2 - value1;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>

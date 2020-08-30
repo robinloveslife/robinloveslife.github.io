@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    滚动条与图片移动 |
+    好的commit规范 |
     
     树熊与浆果</title>
   
@@ -29,14 +29,14 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-滚动条与图片移动" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-commit规范" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
             <header class="article-header">
                 
   
     <h1 class="article-title" itemprop="name">
-      滚动条与图片移动
+      好的commit规范
     </h1>
   
   
@@ -49,8 +49,8 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" class="article-date">
-  <time datetime="2020-08-12T11:48:24.000Z" itemprop="datePublished">2020-08-12</time>
+                        <a href="/2020/08/30/commit%E8%A7%84%E8%8C%83/" class="article-date">
+  <time datetime="2020-08-30T11:54:24.000Z" itemprop="datePublished">2020-08-30</time>
 </a>
                             
                     </div>
@@ -58,8 +58,6 @@
 
                         
                             
-    <div class="tocbot"></div>
-
 
 
 
@@ -73,13 +71,28 @@
                                             
 
                                                 
-                                                                    <h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
+                                                                    <p><type>(<scope>):<subject></p>
+<p>type:必须，说明commit类别</p>
+<ul>
+<li>feat-新功能</li>
+<li>fix-一次提交修复问题</li>
+<li>to-多次提交最终修复问题</li>
+<li>docs-文档</li>
+<li>style-格式</li>
+<li>refactor-重构</li>
+<li>chore-构建过程或辅助工具变动</li>
+<li>revert-回滚到上一个版本</li>
+<li>merge-代码合并</li>
+<li>sync-同步主线或分支的bug</li>
+</ul>
+<p>scope:可选，说明commit影响的范围</p>
+<p>subject:必须，对commit目的的简短描述，建议使用中文，结尾不加标点符号</p>
+<p>例： fix(DAO):用户查询缺少username属性</p>
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckegxoqoa000otosz0lz98ysx" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/30/commit%E8%A7%84%E8%8C%83/" data-id="ckegxoqnb0004tosz50qs1aqr" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -94,19 +107,10 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
-        <strong class="article-nav-caption">Newer</strong>
-        <div class="article-nav-title">
-          
-            w3c学习
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" class="article-nav-link">
+      <a href="/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/" class="article-nav-link">
         <strong class="article-nav-caption">Older</strong>
-        <div class="article-nav-title">vue存储全局变量</div>
+        <div class="article-nav-title">数组里按时间排序</div>
       </a>
     
   </nav>

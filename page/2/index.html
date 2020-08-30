@@ -56,6 +56,65 @@
       <h1 class="page-type-title"></h1>
       
         
+          <article id="post-滚动条与图片移动" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/">滚动条与图片移动</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" class="article-date">
+  <time datetime="2020-08-12T11:48:24.000Z" itemprop="datePublished">2020-08-12</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="滚动条与图片移动"><a href="#滚动条与图片移动" class="headerlink" title="滚动条与图片移动"></a>滚动条与图片移动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;xxx&lt;&#x2F;title&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;out&quot; style&#x3D;&quot;width:100%;height:1300px;position: absolute;&quot;&gt;</span><br><span class="line">        &lt;hr &#x2F;&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;sImg&quot; src&#x3D;&quot;..&#x2F;Pictures&#x2F;th.jpg&quot; style&#x3D;&quot;width:1200px;height:400px;position:absolute&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var yValue &#x3D; 0;</span><br><span class="line">    window.onscroll &#x3D; scrollBottomOrTop;</span><br><span class="line">    function scrollBottomOrTop() &#123;</span><br><span class="line">        if (yValue &gt; window.scrollY) &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var temp &#x3D; yValue - window.scrollY</span><br><span class="line">            move(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        yValue &#x3D; window.scrollY;</span><br><span class="line">        console.log(yValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var img &#x3D; document.getElementById(&quot;sImg&quot;);</span><br><span class="line">    img.top &#x3D; 0;</span><br><span class="line">    function move(k) &#123;</span><br><span class="line">        if (k &gt; 0) &#123;</span><br><span class="line">            img.top &#x3D; img.top - Math.abs(k);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.top &#x3D; img.top + Math.abs(k);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return img.style.top &#x3D; img.top + &#39;px&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/08/12/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E4%B8%8E%E5%9B%BE%E7%89%87%E7%A7%BB%E5%8A%A8/" data-id="ckegxoqoa000otosz0lz98ysx" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
+        
           <article id="post-vue全局存储变量" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
         
@@ -106,7 +165,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="cke77r7ac000fcwsz90283xbx" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/vue%E5%85%A8%E5%B1%80%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F/" data-id="ckegxoqo1000gtosz12pa50dk" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -207,7 +266,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="cke77r7ag000jcwsz0n320b34" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/%E6%89%8B%E6%92%95vue%E6%BA%90%E7%A0%81day01/" data-id="ckegxoqo5000ltosz8t75h6s3" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -287,7 +346,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="cke77r79t0006cwszazw95fus" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/04/el-table%E5%88%86%E9%A1%B5/" data-id="ckegxoqng0007toszhny6hsn1" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -369,7 +428,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="cke77r79r0004cwsz4npie5yz" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/components/" data-id="ckegxoqnc0005toszbebb4mzr" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -469,7 +528,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="cke77r7aj000mcwsz1n8q72pz" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckegxoqo6000mtosz7adn1kb8" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -569,7 +628,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="cke77r79m0003cwszaaq6d2et" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/01/addkey/" data-id="ckegxoqn90003tosz9gzravcn" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -688,7 +747,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="cke77r7a6000ccwsz20ex7lyl" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/30/tips/" data-id="ckegxoqnv000dtosz7g3afy6v" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -776,7 +835,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="cke77r7aa000ecwsz9g2i3xwb" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/29/vuebase/" data-id="ckegxoqnz000ftoszd0qva69y" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -849,79 +908,7 @@ branch: master</code></pre>
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/26/import-export/" data-id="cke77r79y0009cwsz6q1m0y7k" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-fullEditer" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/07/25/fullEditer/">fullEditer</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/07/25/fullEditer/" class="article-date">
-  <time datetime="2020-07-25T11:54:24.000Z" itemprop="datePublished">2020-07-25</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <ul>
-<li>用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Editor v-model&#x3D;&quot;noticeContent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>引</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import Editor from &#39;@&#x2F;components&#x2F;Editor&#39;;</span><br><span class="line">components: &#123;</span><br><span class="line">    Editor</span><br><span class="line">&#125;</span><br><span class="line">noticeContent:&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 图片上传组件辅助 --&gt;</span><br><span class="line">    &lt;el-upload</span><br><span class="line">      class&#x3D;&quot;avatar-uploader quill-img&quot;</span><br><span class="line">      :action&#x3D;&quot;uploadImgUrl&quot;</span><br><span class="line">      name&#x3D;&quot;file&quot;</span><br><span class="line">      :headers&#x3D;&quot;headers&quot;</span><br><span class="line">      :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">      :on-success&#x3D;&quot;quillImgSuccess&quot;</span><br><span class="line">      :on-error&#x3D;&quot;uploadError&quot;</span><br><span class="line">      :before-upload&#x3D;&quot;quillImgBefore&quot;</span><br><span class="line">      accept&#x3D;&quot;.jpg, .jpeg, .png, .gif&quot;</span><br><span class="line">    &gt;&lt;&#x2F;el-upload&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 富文本组件 --&gt;</span><br><span class="line">    &lt;quill-editor</span><br><span class="line">      class&#x3D;&quot;editor&quot;</span><br><span class="line">      v-model&#x3D;&quot;content&quot;</span><br><span class="line">      ref&#x3D;&quot;quillEditor&quot;</span><br><span class="line">      :options&#x3D;&quot;editorOption&quot;</span><br><span class="line">      @blur&#x3D;&quot;onEditorBlur($event)&quot;</span><br><span class="line">      @focus&#x3D;&quot;onEditorFocus($event)&quot;</span><br><span class="line">      @change&#x3D;&quot;onEditorChange($event)&quot;</span><br><span class="line">    &gt;&lt;&#x2F;quill-editor&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; getToken &#125; from &quot;@&#x2F;utils&#x2F;auth&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 工具栏配置</span><br><span class="line">const toolbarOptions &#x3D; [</span><br><span class="line">  [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], &#x2F;&#x2F; 加粗 斜体 下划线 删除线</span><br><span class="line">  [&quot;blockquote&quot;, &quot;code-block&quot;], &#x2F;&#x2F; 引用  代码块</span><br><span class="line">  [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], &#x2F;&#x2F; 有序、无序列表</span><br><span class="line">  [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], &#x2F;&#x2F; 缩进</span><br><span class="line">  [&#123; size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] &#125;], &#x2F;&#x2F; 字体大小</span><br><span class="line">  [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], &#x2F;&#x2F; 标题</span><br><span class="line">  [&#123; color: [] &#125;, &#123; background: [] &#125;], &#x2F;&#x2F; 字体颜色、字体背景颜色</span><br><span class="line">  [&#123; align: [] &#125;], &#x2F;&#x2F; 对齐方式</span><br><span class="line">  [&quot;clean&quot;], &#x2F;&#x2F; 清除文本格式</span><br><span class="line">  [&quot;link&quot;, &quot;image&quot;, &quot;video&quot;], &#x2F;&#x2F; 链接、图片、视频</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">import &#123; quillEditor &#125; from &quot;vue-quill-editor&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.core.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.snow.css&quot;;</span><br><span class="line">import &quot;quill&#x2F;dist&#x2F;quill.bubble.css&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;* 编辑器的内容 *&#x2F;</span><br><span class="line">    value: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;* 图片大小 *&#x2F;</span><br><span class="line">    maxSize: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 4000, &#x2F;&#x2F;kb</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123; quillEditor &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      content: this.value,</span><br><span class="line">      uploadImgUrl: &quot;&quot;,</span><br><span class="line">      editorOption: &#123;</span><br><span class="line">        placeholder: &quot;&quot;,</span><br><span class="line">        theme: &quot;snow&quot;, &#x2F;&#x2F; or &#39;bubble&#39;</span><br><span class="line">        placeholder: &quot;请输入内容&quot;,</span><br><span class="line">        modules: &#123;</span><br><span class="line">          toolbar: &#123;</span><br><span class="line">            container: toolbarOptions,</span><br><span class="line">            handlers: &#123;</span><br><span class="line">              image: function (value) &#123;</span><br><span class="line">                if (value) &#123;</span><br><span class="line">                  &#x2F;&#x2F; 触发input框选择图片文件</span><br><span class="line">                  document.querySelector(&quot;.quill-img input&quot;).click();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                  this.quill.format(&quot;image&quot;, false);</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      uploadImgUrl: process.env.VUE_APP_BASE_API + &quot;&#x2F;common&#x2F;upload&quot;, &#x2F;&#x2F; 上传的图片服务器地址（这个地方注意）</span><br><span class="line">      headers: &#123;</span><br><span class="line">        Authorization: &quot;Bearer &quot; + getToken(),（这个地方注意）</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    value: function () &#123;</span><br><span class="line">      this.content &#x3D; this.value;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onEditorBlur() &#123;</span><br><span class="line">      &#x2F;&#x2F;失去焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorFocus() &#123;</span><br><span class="line">      &#x2F;&#x2F;获得焦点事件</span><br><span class="line">    &#125;,</span><br><span class="line">    onEditorChange() &#123;</span><br><span class="line">      &#x2F;&#x2F;内容改变事件</span><br><span class="line">      this.$emit(&quot;input&quot;, this.content);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传前</span><br><span class="line">    quillImgBefore(file) &#123;</span><br><span class="line">      let fileType &#x3D; file.type;</span><br><span class="line">      if (fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;jpeg&quot; || fileType &#x3D;&#x3D;&#x3D; &quot;image&#x2F;png&quot;) &#123;</span><br><span class="line">        return true;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;请插入图片类型文件(jpg&#x2F;jpeg&#x2F;png)&quot;);</span><br><span class="line">        return false;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    quillImgSuccess(res, file) &#123;</span><br><span class="line">      &#x2F;&#x2F; res为图片服务器返回的数据</span><br><span class="line">      &#x2F;&#x2F; 获取富文本组件实例</span><br><span class="line">      let quill &#x3D; this.$refs.quillEditor.quill;</span><br><span class="line">      &#x2F;&#x2F; 如果上传成功</span><br><span class="line">      if (res.code &#x3D;&#x3D; 200) &#123;</span><br><span class="line">        &#x2F;&#x2F; 获取光标所在位置</span><br><span class="line">        let length &#x3D; quill.getSelection().index;</span><br><span class="line">        &#x2F;&#x2F; 插入图片  res.url为服务器返回的图片地址</span><br><span class="line">        quill.insertEmbed(length, &quot;image&quot;, res.url);</span><br><span class="line">        &#x2F;&#x2F; 调整光标到最后</span><br><span class="line">        quill.setSelection(length + 1);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 富文本图片上传失败</span><br><span class="line">    uploadError() &#123;</span><br><span class="line">      &#x2F;&#x2F; loading动画消失</span><br><span class="line">      this.$message.error(&quot;图片插入失败&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt; </span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.editor &#123;</span><br><span class="line">  line-height: normal !important;</span><br><span class="line">  height: 692px;</span><br><span class="line">&#125;</span><br><span class="line">.quill-img &#123;</span><br><span class="line">  display: none;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;link&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入链接地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-tooltip.ql-editing a.ql-action::after &#123;</span><br><span class="line">  border-right: 0px;</span><br><span class="line">  content: &quot;保存&quot;;</span><br><span class="line">  padding-right: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-tooltip[data-mode&#x3D;&quot;video&quot;]::before &#123;</span><br><span class="line">  content: &quot;请输入视频地址:&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;14px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;small&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;small&quot;]::before &#123;</span><br><span class="line">  content: &quot;10px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;large&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;large&quot;]::before &#123;</span><br><span class="line">  content: &quot;18px&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-label[data-value&#x3D;&quot;huge&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-size .ql-picker-item[data-value&#x3D;&quot;huge&quot;]::before &#123;</span><br><span class="line">  content: &quot;32px&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;文本&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;1&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;1&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题1&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;2&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;2&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题2&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;3&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;3&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题3&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;4&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;4&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题4&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;5&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;5&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题5&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-label[data-value&#x3D;&quot;6&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-header .ql-picker-item[data-value&#x3D;&quot;6&quot;]::before &#123;</span><br><span class="line">  content: &quot;标题6&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item::before &#123;</span><br><span class="line">  content: &quot;标准字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;serif&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;serif&quot;]::before &#123;</span><br><span class="line">  content: &quot;衬线字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-label[data-value&#x3D;&quot;monospace&quot;]::before,</span><br><span class="line">.ql-snow .ql-picker.ql-font .ql-picker-item[data-value&#x3D;&quot;monospace&quot;]::before &#123;</span><br><span class="line">  content: &quot;等宽字体&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/07/25/fullEditer/" data-id="cke77r79x0008cwszcdale5da" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/07/26/import-export/" data-id="ckegxoqnp000atosz0vei8gzq" class="article-share-link">
                                             Share
                                         </a>
                                         
