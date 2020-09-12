@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
     
-    树熊与浆果</title>
+    黄斌的博客</title>
   
     <link rel="shortcut icon" href="/favicon.ico">
   
@@ -39,9 +39,9 @@
 	  <div class="video-overlay"></div>
     </div>
     <div class="video-inner text-center text-white">
-      <h1><a href="/">树熊与浆果</a></h1>
-      <p>修身 | 齐家 | 平天下</p>
-      <div><img src="/images/hexo-inverted.svg" class="brand" alt="树熊与浆果"></div>
+      <h1><a href="/">黄斌的博客</a></h1>
+      <p>要在自己的世界里发光</p>
+      <div><img src="/images/hexo-inverted.svg" class="brand" alt="黄斌的博客"></div>
     </div>
     <div class="video-learn-more">
       <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
@@ -55,6 +55,65 @@
       
       <h1 class="page-type-title"></h1>
       
+        
+          <article id="post-表单验证例子" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/09/13/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%E4%BE%8B%E5%AD%90/">form表单验证实例</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/09/13/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%E4%BE%8B%E5%AD%90/" class="article-date">
+  <time datetime="2020-09-13T11:54:24.000Z" itemprop="datePublished">2020-09-13</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;libs.baidu.com&#x2F;jquery&#x2F;1.9.1&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;vue-router&#x2F;dist&#x2F;vue-router.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue-resource.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;link href&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;element-ui&#x2F;2.4.5&#x2F;theme-chalk&#x2F;index.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;element-ui&#x2F;2.4.5&#x2F;index.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    #app &#123;</span><br><span class="line">        background-color: rgb(239, 246, 250);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;register&quot;&gt;</span><br><span class="line">            &lt;section class&#x3D;&quot;form_container&quot;&gt;</span><br><span class="line">                &lt;div class&#x3D;&quot;manage_tip&quot;&gt;</span><br><span class="line">                    &lt;span class&#x3D;&quot;title&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;el-form :model&#x3D;&quot;registerUser&quot; :rules&#x3D;&quot;rules&quot; class&#x3D;&quot;registerForm&quot; ref&#x3D;&quot;registerForm&quot;</span><br><span class="line">                    label-width&#x3D;&quot;80px&quot;&gt;</span><br><span class="line">                    &lt;el-form-item label&#x3D;&quot;用户名&quot; prop&#x3D;&quot;name&quot;&gt;</span><br><span class="line">                        &lt;el-input v-model&#x3D;&quot;registerUser.name&quot; placeholder&#x3D;&quot;请输入用户名&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                    &lt;el-form-item label&#x3D;&quot;邮箱&quot; prop&#x3D;&quot;email&quot;&gt;</span><br><span class="line">                        &lt;el-input v-model&#x3D;&quot;registerUser.email&quot; placeholder&#x3D;&quot;请输入邮箱&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                    &lt;el-form-item label&#x3D;&quot;密码&quot; prop&#x3D;&quot;password&quot;&gt;</span><br><span class="line">                        &lt;el-input v-model&#x3D;&quot;registerUser.password&quot; placeholder&#x3D;&quot;请输入密码&quot; type&#x3D;&quot;password&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                    &lt;el-form-item label&#x3D;&quot;确认密码&quot; prop&#x3D;&quot;password2&quot;&gt;</span><br><span class="line">                        &lt;el-input v-model&#x3D;&quot;registerUser.password2&quot; placeholder&#x3D;&quot;请确认密码&quot; type&#x3D;&quot;password&quot;&gt;&lt;&#x2F;el-input&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                    &lt;el-form-item label&#x3D;&quot;选择身份&quot;&gt;</span><br><span class="line">                        &lt;el-select v-model&#x3D;&quot;registerUser.identity&quot; placeholder&#x3D;&quot;请选择身份&quot;&gt;</span><br><span class="line">                            &lt;el-option label&#x3D;&quot;管理员&quot; value&#x3D;&quot;manager&quot;&gt;&lt;&#x2F;el-option&gt;</span><br><span class="line">                            &lt;el-option label&#x3D;&quot;员工&quot; value&#x3D;&quot;employee&quot;&gt;&lt;&#x2F;el-option&gt;</span><br><span class="line">                        &lt;&#x2F;el-select&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                    &lt;el-form-item&gt;</span><br><span class="line">                        &lt;el-button type&#x3D;&quot;primary&quot; class&#x3D;&quot;submit_btn&quot; @click&#x3D;&quot;submitForm(&#39;registerForm&#39;)&quot;&gt;注 册&lt;&#x2F;el-button&gt;</span><br><span class="line">                    &lt;&#x2F;el-form-item&gt;</span><br><span class="line">                &lt;&#x2F;el-form&gt;</span><br><span class="line">            &lt;&#x2F;section&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">        el: &#39;#app&#39;,</span><br><span class="line">        data() &#123;</span><br><span class="line">            var validatePass2 &#x3D; (rule, value, callback) &#x3D;&gt; &#123;</span><br><span class="line">                if (value !&#x3D;&#x3D; this.registerUser.password) &#123;</span><br><span class="line">                    callback(new Error(&quot;两次输入密码不一致!&quot;));</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    callback();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            return &#123;</span><br><span class="line">                registerUser: &#123;</span><br><span class="line">                    name: &quot;&quot;,</span><br><span class="line">                    email: &quot;&quot;,</span><br><span class="line">                    password: &quot;&quot;,</span><br><span class="line">                    password2: &quot;&quot;,</span><br><span class="line">                    identity: &quot;&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                rules: &#123;</span><br><span class="line">                    &#x2F;&#x2F; 要以数组形式展示</span><br><span class="line">                    name: [</span><br><span class="line">                        &#123; required: true, message: &quot;用户名不能为空&quot;, trigger: &quot;change&quot; &#125;,</span><br><span class="line">                        &#123; min: 2, max: 30, message: &quot;长度在 2 到 30 个字符&quot;, trigger: &quot;blur&quot; &#125;</span><br><span class="line">                    ],</span><br><span class="line">                    email: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            type: &quot;email&quot;,</span><br><span class="line">                            required: true,</span><br><span class="line">                            message: &quot;邮箱格式不正确&quot;,</span><br><span class="line">                            trigger: &quot;blur&quot;</span><br><span class="line">                        &#125;</span><br><span class="line">                    ],</span><br><span class="line">                    password: [</span><br><span class="line">                        &#123; required: true, message: &quot;密码不能为空&quot;, trigger: &quot;blur&quot; &#125;,</span><br><span class="line">                        &#123; min: 6, max: 30, message: &quot;长度在 6 到 30 个字符&quot;, trigger: &quot;blur&quot; &#125;</span><br><span class="line">                    ],</span><br><span class="line">                    password2: [</span><br><span class="line">                        &#123; required: true, message: &quot;确认密码不能为空&quot;, trigger: &quot;blur&quot; &#125;,</span><br><span class="line">                        &#123;</span><br><span class="line">                            min: 6,</span><br><span class="line">                            max: 30,</span><br><span class="line">                            message: &quot;长度在 6 到 30 个字符&quot;,</span><br><span class="line">                            trigger: &quot;blur&quot;</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &#123; validator: validatePass2, trigger: &quot;blur&quot; &#125;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            submitForm(formName) &#123;</span><br><span class="line">                this.$refs[formName].validate(valid &#x3D;&gt; &#123;</span><br><span class="line">                    if (valid) &#123;</span><br><span class="line">                        this.$message(&#123;</span><br><span class="line">                            message: &quot;注册成功！&quot;,</span><br><span class="line">                            type: &quot;success&quot;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        this.$message(&#123;</span><br><span class="line">                            message: &quot;注册失败！&quot;,</span><br><span class="line">                            type: &quot;error&quot;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://robinloveslife.cn/2020/09/13/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%E4%BE%8B%E5%AD%90/" data-id="ckezy0c1q000qlc6sf28hhvzr" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+                                    </footer>
+									
+										
+									
+
+    </div>
+
+    
+
+                
+
+</article>
         
           <article id="post-commit规范" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
     <div class="article-inner">
@@ -115,7 +174,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/30/commit%E8%A7%84%E8%8C%83/" data-id="ckegy7y7d00042sszavtj651h" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/30/commit%E8%A7%84%E8%8C%83/" data-id="ckezy0c030004lc6sbjw0dydd" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -187,7 +246,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/" data-id="ckegy7y8e000n2ssz9p3webfj" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/21/%E6%95%B0%E7%BB%84%E9%87%8C%E6%8C%89%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F/" data-id="ckezy0c1o000plc6s4z3u8iv3" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -259,7 +318,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/" data-id="ckegy7y85000k2sszgsjva18d" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E6%88%91%E4%BB%AC%E4%B8%8E%E6%81%B6%E7%9A%84%E8%B7%9D%E7%A6%BB/" data-id="ckezy0c11000jlc6sde8h7cvc" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -322,7 +381,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/" data-id="ckegy7y82000h2ssz8li81xgv" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E5%89%8D%E7%AB%AF%E5%88%86%E9%A1%B5/" data-id="ckezy0c0z000ilc6sg6k27nos" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -399,7 +458,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" data-id="ckegy7y7h00062ssz3j11c7ks" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/echarts&dojo&%E5%85%BC%E5%AE%B9%E6%80%BB%E7%BB%93/" data-id="ckezy0c060006lc6s5bwg25v7" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -459,7 +518,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/" data-id="ckegy7y8i000p2ssz1gym9qb6" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/19/%E8%81%94%E8%B0%83%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%931/" data-id="ckezy0c1j000olc6s4h3ge9hf" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -517,7 +576,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/" data-id="ckegy7y83000i2ssz4qzfcnpz" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/18/%E5%89%8D%E7%AB%AF%E5%B7%A5%E4%BD%9C%E9%A1%BA%E5%BA%8F/" data-id="ckezy0c0x000glc6sa5677g6h" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -654,7 +713,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" data-id="ckegy7y84000j2ssz5lt10nxa" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/17/%E5%B8%B8%E7%94%A8%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" data-id="ckezy0c0y000hlc6s7osyhtu8" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -711,135 +770,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/" data-id="ckegy7y7t000c2sszfwqp09kw" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-									
-										
-									
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-W3C学习" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/">w3c学习</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2020-08-12T11:54:24.000Z" itemprop="datePublished">2020-08-12</time>
-</a>
-                            
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h1 id="W3C"><a href="#W3C" class="headerlink" title="W3C"></a>W3C</h1><blockquote>
-<p>万维网联盟</p>
-</blockquote>
-<h2 id="结构标准语言"><a href="#结构标准语言" class="headerlink" title="结构标准语言"></a>结构标准语言</h2><ol>
-<li><p>可扩展标记语言 —-XML</p>
-<ul>
-<li><p>宗旨：传输和存储数据</p>
-</li>
-<li><p>特点：</p>
-<ul>
-<li><p>没有预定义标签</p>
-</li>
-<li><p>必须有关闭标签</p>
-</li>
-<li><p>对大小写敏感</p>
-</li>
-<li><p>属性值必须加引号</p>
-</li>
-<li><p>实体符号必须引用</p>
-</li>
-<li><p>空格会保留</p>
-</li>
-</ul>
-</li>
-<li><p>结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;root&gt; &#x2F;&#x2F;必须包含根元素</span><br><span class="line">&lt;child&gt;</span><br><span class="line">&lt;subchild&gt;.....&lt;&#x2F;subchild&gt;</span><br><span class="line">&lt;&#x2F;child&gt;</span><br><span class="line">&lt;&#x2F;root&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>DTD</p>
-<ul>
-<li>定义xml结构</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE root</span><br><span class="line">[</span><br><span class="line">&lt;!ELEMENT root (child,subchild)&gt;</span><br><span class="line">&lt;!ELEMENT child (#PCDATA)&gt;</span><br><span class="line">&lt;!ELEMENT subchild (#PCDATA)&gt;</span><br><span class="line">]&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Schema</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;xs:element name&#x3D;&quot;root&quot;&gt;</span><br><span class="line">&lt;xs:complexType&gt;</span><br><span class="line">&lt;xs:sequence&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;child&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;xs:element name&#x3D;&quot;subchild&quot; type&#x3D;&quot;xs:string&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;xs:sequence&gt;</span><br><span class="line">&lt;&#x2F;xs:complexType&gt;</span><br><span class="line">&lt;&#x2F;xs:element&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>XMLHttpRequest对象</p>
-<ul>
-<li>在后台与服务器交换数据</li>
-</ul>
-</li>
-<li><p>XML解析器</p>
-</li>
-<li><p>XML DOM</p>
-<ul>
-<li>document.getElementById(“to”).innerHTML=<br>xmlDoc.getElementsByTagName(“to”)[0].childNodes[0].nodeValue;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li><p>可扩展超文本编辑语言 —-XHTML</p>
-<ul>
-<li>特点：<ul>
-<li>XHTML 元素必须被正确地嵌套。</li>
-<li>XHTML 元素必须被关闭。</li>
-<li>标签名必须用小写字母。</li>
-<li>XHTML 文档必须拥有根元素</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="表现标准语言"><a href="#表现标准语言" class="headerlink" title="表现标准语言"></a>表现标准语言</h2><ul>
-<li>层叠样式表 —-CSS(2,3)</li>
-</ul>
-<h2 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h2><ol>
-<li>文档对象模型 —-DOM</li>
-<li>ECMASscript</li>
-</ol>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://robinloveslife.cn/2020/08/12/W3C%E5%AD%A6%E4%B9%A0/" data-id="ckegy7y7000012ssz8s2zboh4" class="article-share-link">
+                                        <a data-url="http://robinloveslife.cn/2020/08/16/js%E6%95%B0%E7%BB%84%E5%86%85%E5%AE%B9%E6%8E%92%E5%BA%8F/" data-id="ckezy0c0m000clc6s6uljb7w0" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -879,7 +810,7 @@
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2020 树熊与浆果</li>
+      <li>&copy; 2020 黄斌的博客</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>
@@ -892,7 +823,7 @@
 <nav class="navbar">
   
     <div class="logo">
-      <a href="/"><img src="/images/hexo.svg" alt="树熊与浆果"></a>
+      <a href="/"><img src="/images/hexo.svg" alt="黄斌的博客"></a>
     </div>
   
   <ul class="nav nav-main">
